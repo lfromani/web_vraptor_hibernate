@@ -3,24 +3,33 @@
 body {
 	padding-top: 40px;
 	padding-bottom: 40px;
-	background-color: #eee;
+	background-color: #2775a5 !important;
 }
 
-.form-signin {
+.geral {
+	background-color: white;
+	border-radius: 10px 10px;
+}
+
+h2 {
+	text-align: center;
+}
+
+.formLogin {
 	max-width: 330px;
 	padding: 15px;
 	margin: 0 auto;
 }
 
-.form-signin .form-signin-heading, .form-signin .checkbox {
+.formLogin .form-signin-heading, .formLogin {
 	margin-bottom: 10px;
 }
 
-.form-signin .checkbox {
+.formLogin {
 	font-weight: normal;
 }
 
-.form-signin .form-control {
+.formLogin .inputs {
 	position: relative;
 	height: auto;
 	-webkit-box-sizing: border-box;
@@ -30,17 +39,17 @@ body {
 	font-size: 16px;
 }
 
-.form-signin .form-control:focus {
+.formLogin .inputs:focus {
 	z-index: 2;
 }
 
-.form-signin input[type="email"] {
+.formLogin {
 	margin-bottom: -1px;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
 }
 
-.form-signin input[type="password"] {
+.formLogin {
 	margin-bottom: 10px;
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
