@@ -17,7 +17,7 @@
     <div class="container">
       <form class="formLogin">
       <div class="well">
-        <h2 class="titulo">Login</h2>
+        <h3 class="titulo">Login</h3>
         <label>Usuário</label>
         <br>
         <input type="text" id="usuario" class="form-control" placeholder="Usuário" required autofocus>
