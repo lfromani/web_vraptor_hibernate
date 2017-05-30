@@ -1,10 +1,15 @@
 package Model;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 public class Usuario {
 	
 	
 	private String nome;
 	
+	@Id
+	@GeneratedValue
 	private long codigo;
 	
 	public Usuario(String nome, long codigo, String senha) {
