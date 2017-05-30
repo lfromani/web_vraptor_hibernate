@@ -1,11 +1,12 @@
 package Model;
 
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 public class Usuario {
 	
-	
+	@Column(nullable=false)
 	private String nome;
 	
 	@Id
