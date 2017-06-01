@@ -20,13 +20,29 @@ public class Usuario implements Serializable{
 	@GeneratedValue
 	private long codigo;
 	
+	private String login;
+	
 	private String senha;
 	
-	public Usuario(String nome, long codigo, String senha) {
+	public Usuario(String nome, long codigo, String senha,String login) {
 		super();
 		this.nome = nome;
 		this.codigo = codigo;
 		this.senha = senha;
+		this.login = login;
+	}
+
+	public Usuario(String login) {
+		super();
+	
+	}
+
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
 	}
 
 	public String getNome() {
