@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="container">
-      <form class="formLogin" action="${linkTo[IndexController].logar}">
+      <form class="formLogin">
       <div class="well">
         <h3 class="titulo">Login</h3>
         <label>Usuário</label>
