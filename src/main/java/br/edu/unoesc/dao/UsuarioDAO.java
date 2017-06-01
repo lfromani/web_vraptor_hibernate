@@ -1,5 +1,10 @@
 package br.edu.unoesc.dao;
 
-public class UsuarioDAO  {
+import javax.enterprise.context.RequestScoped;
+
+import br.edu.unoesc.model.Usuario;
+
+@RequestScoped
+public class UsuarioDAO extends GenericDAO<Usuario> {
 
 }
