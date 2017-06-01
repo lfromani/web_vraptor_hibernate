@@ -1,4 +1,4 @@
-package br.com.unoesc.controller;
+package br.edu.unoesc.controller;
 
 import java.util.List;
 
