@@ -1,4 +1,4 @@
-package DAO;
+package br.edu.unoesc.dao;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
-import Exception.MinhaExceptionDAO;
+import br.edu.unoesc.exception.MinhaExceptionDAO;
 
 public class GenericDAO {
 

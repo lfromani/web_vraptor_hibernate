@@ -1,4 +1,4 @@
-package br.com.caelum.vraptor.controller;
+package br.com.unoesc.controller;
 
 import javax.inject.Inject;
 

@@ -1,15 +1,15 @@
-package br.com.caelum.vraptor.controller;
+package br.com.unoesc.controller;
 
 import java.util.List;
 
 import javax.inject.Inject;
 
-import DAO.VeiculoDAO;
-import Model.Veiculo;
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Result;
+import br.edu.unoesc.dao.VeiculoDAO;
+import br.edu.unoesc.model.Veiculo;
 
 
 

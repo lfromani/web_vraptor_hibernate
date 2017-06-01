@@ -1,4 +1,4 @@
-package Model;
+package br.edu.unoesc.model;
 
 public interface MeuModelo {
 

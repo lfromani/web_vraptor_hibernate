@@ -1,4 +1,4 @@
-package DAO;
+package br.edu.unoesc.dao;
 
 public class VeiculoDAO {
 	
