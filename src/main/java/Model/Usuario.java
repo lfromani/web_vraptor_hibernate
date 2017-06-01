@@ -1,17 +1,26 @@
 package Model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-public class Usuario {
+public class Usuario implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4670141641259011143L;
+
 	@Column(nullable=false)
 	private String nome;
 	
 	@Id
 	@GeneratedValue
 	private long codigo;
+	
+	private String senha;
 	
 	public Usuario(String nome, long codigo, String senha) {
 		super();
@@ -48,6 +57,6 @@ public class Usuario {
 		this.senha = senha;
 	}
 
-	private String senha;
+	
 
 }
