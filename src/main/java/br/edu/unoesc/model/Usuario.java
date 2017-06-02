@@ -3,12 +3,13 @@ package br.edu.unoesc.model;
 import java.io.Serializable;
 
 import javax.persistence.Column;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Usuario implements Serializable, MeuModelo {
+public class Usuario implements Serializable {
 
 	private static final long serialVersionUID = 4670141641259011143L;
 
@@ -66,6 +67,7 @@ public class Usuario implements Serializable, MeuModelo {
 	}
 
 	public void setSenha(String senha) {
-		this.senha = senha;
 	}
+
 }
+	
