@@ -5,7 +5,9 @@ import javax.enterprise.context.RequestScoped;
 import br.edu.unoesc.model.Usuario;
 
 
+
+
 @RequestScoped
-public class UsuarioDAO extends GenericDAO<Usuario> {
+public class UsuarioDAO extends GenericDAO<Usuario>  {
 
 }
