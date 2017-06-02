@@ -60,6 +60,7 @@ public class VeiculoController {
 			result.forwardTo(VeiculoController.class).listar(veiculos);
 		}
 		
+		
 		@Get("/excluir/{codigo}")
 		public void excluir(Long codigo) {
 			Veiculo veic = new Veiculo();
@@ -78,4 +79,10 @@ public class VeiculoController {
 				(Veiculo) veiculoDao.pesquisarPorPlaca(placa, Veiculo.PESQUISAR_POR_PLACA, Veiculo.class);
 			result.forwardTo(VeiculoController.class).formulario ();
 	}
+		@Get("/editar/{ano}")
+		public void editarano(String ano) {
+			this.veiculoSelecionado = 
+				(Veiculo) veiculoDao.pesquisarPorAno(ano, Veiculo.PESQUISAR_POR_ANO, Veiculo.class);
+			result.forwardTo(VeiculoController.class).formulario ();
+}
 }
