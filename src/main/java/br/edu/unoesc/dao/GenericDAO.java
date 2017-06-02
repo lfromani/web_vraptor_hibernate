@@ -10,8 +10,9 @@ import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
 import br.edu.unoesc.exception.MinhaExceptionDAO;
+import br.edu.unoesc.model.MeuModelo;
 
-public class GenericDAO {
+public class GenericDAO<T extends MeuModelo> {
 
 	@Produces
 	protected EntityManagerFactory emf;
