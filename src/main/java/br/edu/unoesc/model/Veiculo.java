@@ -13,30 +13,21 @@ import javax.persistence.NamedQuery;
 
 		@NamedQuery(name = Veiculo.LISTAR, query = "select v from Veiculo v"),
 
-		@NamedQuery(name = Veiculo.PESQUISAR_POR_NOME,
-		query = "select v from Veiculo v where v.nome like :NOME"),
+		@NamedQuery(name = Veiculo.PESQUISAR_POR_NOME, query = "select v from Veiculo v where v.nome like :NOME"),
 
-		@NamedQuery(name = Veiculo.PESQUISAR_POR_PLACA,
-		query = "select v from Veiculo v where v.placa like :PLACA"),
+		@NamedQuery(name = Veiculo.PESQUISAR_POR_PLACA, query = "select v from Veiculo v where v.placa like :PLACA"),
 
-
-       @NamedQuery (name = Veiculo.PESQUISAR_POR_ANO,
-       query = "select v from Veiculo v where v.ano like :ANO") 
-})
+		@NamedQuery(name = Veiculo.PESQUISAR_POR_ANO, query = "select v from Veiculo v where v.ano like :ANO") })
 
 @Entity
-
 public class Veiculo implements Serializable, MeuModelo {
 
 	private static final long serialVersionUID = 3083153010884512596L;
 
 	public static final String LISTAR = "veiculo.listar";
-	public static final String PESQUISAR_POR_NOME = 
-			"veiculo.pesquisar_por_nome";
-	public static final String PESQUISAR_POR_PLACA =
-			"veiculo.pesquisar_por_placa";
-	public static final String PESQUISAR_POR_ANO =
-			"veiculo.pesquisar_por_ano";
+	public static final String PESQUISAR_POR_NOME = "veiculo.pesquisar_por_nome";
+	public static final String PESQUISAR_POR_PLACA = "veiculo.pesquisar_por_placa";
+	public static final String PESQUISAR_POR_ANO = "veiculo.pesquisar_por_ano";
 
 	@Id
 	@GeneratedValue
@@ -51,6 +42,18 @@ public class Veiculo implements Serializable, MeuModelo {
 	private String nome;
 
 	private String ano;
+
+	public Veiculo() {
+		super();
+	}
+
+	public Veiculo(String nome, Long codigo, String placa, String cor) {
+		super();
+		this.nome = nome;
+		this.codigo = codigo;
+		this.placa = placa;
+		this.cor = cor;
+	}
 
 	public String getAno() {
 		return ano;
@@ -94,19 +97,6 @@ public class Veiculo implements Serializable, MeuModelo {
 
 	public void setCor(String cor) {
 		this.cor = cor;
-	}
-
-	public Veiculo(String nome, Long codigo, String placa, String cor) {
-		super();
-		this.nome = nome;
-		this.codigo = codigo;
-		this.placa = placa;
-		this.cor = cor;
-	}
-
-	public Veiculo() {
-		super();
-
 	}
 
 }
