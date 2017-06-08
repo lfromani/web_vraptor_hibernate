@@ -1,19 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <!DOCTYPE html>
 <html lang="PT-BR">
 <head>
 	<meta charset="UTF-8">
 	<title>Login</title>
-	<style type="text/css">
-    	<%@include file="../../css/style.css" %>
-    	<%@include file="../../css/bootstrap.css" %>
-	</style>
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-      <form class="formLogin">
+      <form class="formLogin" action='<c:url value="/login/index"/>' method="post">
       <div class="well">
         <h3 class="titulo">Login</h3>
         <label>Usuário</label>
