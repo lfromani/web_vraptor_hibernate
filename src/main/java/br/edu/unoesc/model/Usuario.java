@@ -1,17 +1,25 @@
 package br.edu.unoesc.model;
 
 import java.io.Serializable;
-
 import javax.persistence.Column;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+
+@NamedQueries({ @NamedQuery(name = Usuario.LISTAR, query = "select u from Usuario u"),
+		@NamedQuery(name = Usuario.PESQUISAR_POR_NOME, query = "select u from Usuario u where u.nome like :NOME"),
+		@NamedQuery(name = Usuario.PESQUISAR_POR_CODIGO, query = "select u from Usuario u where u.codigo = :CODIGO") })
 
 @Entity
 public class Usuario implements Serializable, MeuModelo {
 
 	private static final long serialVersionUID = 4670141641259011143L;
+
+	public static final String LISTAR = "usuario.listar";
+	public static final String PESQUISAR_POR_NOME = "usuario.pesquisar_por_nome";
+	public static final String PESQUISAR_POR_CODIGO = "usuario.pesqusar_por_codigo";
 
 	@Id
 	@GeneratedValue
@@ -20,7 +28,7 @@ public class Usuario implements Serializable, MeuModelo {
 	@Column(nullable = false)
 	private String nome;
 
-	@Column
+	@Column(nullable = false)
 	private String login;
 
 	@Column(nullable = false)
@@ -67,6 +75,6 @@ public class Usuario implements Serializable, MeuModelo {
 	}
 
 	public void setSenha(String senha) {
+		this.senha = senha;
 	}
-
 }

@@ -1,18 +1,18 @@
 package br.edu.unoesc.dao;
 
 import java.util.List;
-
+import javax.enterprise.context.RequestScoped;
 import javax.enterprise.inject.Produces;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
-
 import br.edu.unoesc.exception.MinhaExceptionDAO;
 import br.edu.unoesc.model.MeuModelo;
 
-public class GenericDAO<T extends MeuModelo> {
+@RequestScoped
+public abstract class GenericDAO<T extends MeuModelo> {
 
 	@Produces
 	protected EntityManagerFactory emf;

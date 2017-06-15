@@ -6,8 +6,7 @@ import javax.persistence.TypedQuery;
 import br.edu.unoesc.model.Veiculo;
 
 @RequestScoped
-public class VeiculoDAO extends GenericDAO<Veiculo>{
-	
+public class VeiculoDAO extends GenericDAO<Veiculo> {
 	
 	public Veiculo pesquisarPorPlaca(String placa, String query, Class<Veiculo> tipo) {
 		conectar();
@@ -16,9 +15,8 @@ public class VeiculoDAO extends GenericDAO<Veiculo>{
 		Veiculo objeto = tq.getSingleResult();
 		desconectar();
 		return objeto;
-
 	}
-	
+
 	public Veiculo pesquisarPorAno(String ano, String query, Class<Veiculo> tipo) {
 		conectar();
 		TypedQuery<Veiculo> tq = em.createNamedQuery(query, tipo);
