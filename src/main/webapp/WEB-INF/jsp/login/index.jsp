@@ -11,9 +11,8 @@
 	<div class="container-fluid" id="cssmenu">
 		<ul>
 			<li><a href="">Home</a></li>
-			<li><a href="/veiculo/cadastro">Cadastro de Veículo</a></li>
+			<li><a href="${linkTo[VeiculoController].cadastro()}">Cadastro de Veículo</a></li>
 			<li><a href="${linkTo[VeiculoController].listar()}">Lista de Veículo</a></li>
-			
 			<li><a href="${linkTo[UsuarioController].cadastro()}">Cadastro de Usuário</a></li>
 			<li><a href="${linkTo[UsuarioController].listar()}">Lista de Usuário</a></li>
 		</ul>

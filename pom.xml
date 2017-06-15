@@ -98,8 +98,6 @@
 			<artifactId>jboss-logging</artifactId>
 			<version>3.2.1.Final</version>
 		</dependency>
-
-
 	</dependencies>
 
 	<build>
@@ -123,7 +121,6 @@
 					<path>/</path>
 				</configuration>
 			</plugin>
-
 		</plugins>
 	</build>
 </project>

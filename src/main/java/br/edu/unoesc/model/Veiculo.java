@@ -9,14 +9,9 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 
-@NamedQueries({
-
-		@NamedQuery(name = Veiculo.LISTAR, query = "select v from Veiculo v"),
-
+@NamedQueries({ @NamedQuery(name = Veiculo.LISTAR, query = "select v from Veiculo v"),
 		@NamedQuery(name = Veiculo.PESQUISAR_POR_NOME, query = "select v from Veiculo v where v.nome like :NOME"),
-
 		@NamedQuery(name = Veiculo.PESQUISAR_POR_PLACA, query = "select v from Veiculo v where v.placa like :PLACA"),
-
 		@NamedQuery(name = Veiculo.PESQUISAR_POR_ANO, query = "select v from Veiculo v where v.ano like :ANO") })
 
 @Entity
@@ -33,39 +28,42 @@ public class Veiculo implements Serializable, MeuModelo {
 	@GeneratedValue
 	private Long codigo;
 
-	public Veiculo(String ano) {
-		super();
-		this.ano = ano;
-	}
-
 	@Column(nullable = false)
 	private String nome;
 
+	@Column
 	private String ano;
+
+	@Column
+	private String placa;
+
+	@Column
+	private String cor;
+
+	@Column
+	private Long vaga;
 
 	public Veiculo() {
 		super();
 	}
 
-	public Veiculo(String nome, Long codigo, String placa, String cor) {
+	public Veiculo(Long codigo, String nome, String ano, String placa, String cor, Long vaga) {
 		super();
-		this.nome = nome;
 		this.codigo = codigo;
+		this.nome = nome;
+		this.ano = ano;
 		this.placa = placa;
 		this.cor = cor;
+		this.vaga = vaga;
 	}
 
-	public String getAno() {
-		return ano;
+	public Long getCodigo() {
+		return codigo;
 	}
 
-	public void setAno(String ano) {
-		this.ano = ano;
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
 	}
-
-	private String placa;
-
-	private String cor;
 
 	public String getNome() {
 		return nome;
@@ -75,12 +73,12 @@ public class Veiculo implements Serializable, MeuModelo {
 		this.nome = nome;
 	}
 
-	public Long getCodigo() {
-		return codigo;
+	public String getAno() {
+		return ano;
 	}
 
-	public void setCodigo(Long codigo) {
-		this.codigo = codigo;
+	public void setAno(String ano) {
+		this.ano = ano;
 	}
 
 	public String getPlaca() {
@@ -97,6 +95,14 @@ public class Veiculo implements Serializable, MeuModelo {
 
 	public void setCor(String cor) {
 		this.cor = cor;
+	}
+
+	public Long getVaga() {
+		return vaga;
+	}
+
+	public void setVaga(Long vaga) {
+		this.vaga = vaga;
 	}
 
 }

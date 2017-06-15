@@ -4,18 +4,30 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
 	<title>Cadastro de Usuário</title>
 </head>
 <body>
 	<h3>Cadastro de Usuário</h3>
 	<small>Novo</small>
 	<form action="${linkTo[UsuarioController].salvar()}" method="post">
-		<label>Nome</label>
-		<input type="text" name="usuario.nome" value="${usuario.nome}"/>
-		<label>Login</label>
-		<input type="text" name="usuario.login" value="${usuario.login}"/>
-		<label>Senha</label>
-		<input type="password" name="usuario.senha" value="${usuario.senha}"/>
+		<div class="form-group">
+			<label>Código</label>
+			<input class="form-control" type="hidden" name="usuario.codigo" value="${usuario.codigo}" disabled="disabled"/>
+		</div>
+		<div class="form-group">		
+			<label>Nome</label>
+			<input class="form-control" type="text" name="usuario.nome" value="${usuario.nome}"/>
+		</div>
+		<div class="form-group">	
+			<label>Login</label>
+			<input class="form-control" type="text" name="usuario.login" value="${usuario.login}"/>
+		</div>
+		<div class="form-group">	
+			<label>Senha</label>
+			<input class="form-control" type="password" name="usuario.senha" value="${usuario.senha}"/>
+		</div>
 		<input type="submit"/>
 	</form>
 </body>
