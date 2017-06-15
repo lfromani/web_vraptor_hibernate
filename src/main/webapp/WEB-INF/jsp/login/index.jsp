@@ -4,18 +4,20 @@
 <html lang='PT-BR'>
 <head>
 	<meta charset='UTF-8'>
-	<link href="css/style.css" rel="stylesheet">
-	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet">
+	<link href="<c:url value="/js/bootstrap.js"/>" rel="stylesheet">
 </head>
 <body>
-	<div class="container-fluid" id="cssmenu">
-		<ul>
-			<li><a href="">Home</a></li>
-			<li><a href="${linkTo[VeiculoController].cadastro()}">Cadastro de Veículo</a></li>
-			<li><a href="${linkTo[VeiculoController].listar()}">Lista de Veículo</a></li>
-			<li><a href="${linkTo[UsuarioController].cadastro()}">Cadastro de Usuário</a></li>
-			<li><a href="${linkTo[UsuarioController].listar()}">Lista de Usuário</a></li>
-		</ul>
-	</div>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+          		<a class="navbar-brand" href="${linkTo[LoginController].index()}">Home</a>
+          		<a class="navbar-brand" href="${linkTo[VeiculoController].cadastro()}">Cadastro veículo</a>
+          		<a class="navbar-brand" href="${linkTo[VeiculoController].listar()}">Lista veículo</a>
+          		<a class="navbar-brand" href="${linkTo[UsuarioController].cadastro()}">Cadastro usuário</a>
+          		<a class="navbar-brand" href="${linkTo[UsuarioController].listar()}">Lista usuário</a>
+			</div>
+		</div>
+	</nav>
 </body>
 </html>

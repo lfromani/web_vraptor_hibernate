@@ -5,20 +5,40 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Lista de Usuários</title>
+	<link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet">
+	<link href="<c:url value="/js/bootstrap.js"/>" rel="stylesheet">
+	<c:import url="../login/index.jsp"></c:import>
 </head>
 <body>
-	<br/><a href="${linkTo[LoginController].index()}">Menu</a>
-	<br/><a href="${linkTo[UsuarioController].cadastro()}">Novo usuário</a>
-	<form action='<c:url value="/usuario/pesquisar"/>'
-	    method="post">
-	    <input type="text" name="filtro"/>
-		<input type="submit" value="Enviar" />
-	</form>
-
-	<c:forEach var="p" items="${resultado}">
-		<br/> <a href="${linkTo[UsuarioController].editar(p.codigo)}">${p.nome}</a>  
-		- ${p.codigo} 
-		<a href="${linkTo[UsuarioController].excluir(p.codigo)}">Excluir</a>
-	</c:forEach>
+	<br>
+	<br>
+	<br>
+	<div class="col-sm-8">
+	<div class="table-responsive">
+	<table class="table table-bordered">
+		<c:forEach var="usuario" items="${resultado}">
+			<tr style="text-align: center;">
+				<td style="width: 10%"><b>Código</b></td>
+				<td style="width: 50%"><b>Nome</b></td>
+				<td style="width: 20%"><b>Login</b></td>
+				<td style="width: 9%"></td>
+			</tr>
+			<tr>
+				<td align="center"><c:out value="${usuario.codigo}"/></td>
+				<td align="center"><c:out value="${usuario.nome}"/></td>
+				<td align="center"><c:out value="${usuario.login}"/></td>
+				<td>
+					<a class="btn btn-xs btn-primary" type="button" href="${linkTo[UsuarioController].editar(usuario.codigo)}">
+						<span style="padding: 2px" class="glyphicon glyphicon-pencil"></span>
+					</a>
+					<a class="btn btn-xs btn-danger" type="button" href="${linkTo[UsuarioController].excluir(usuario.codigo)}">
+						<span style="padding: 2px" class="glyphicon glyphicon-trash"></span>
+					</a>
+				</td>
+			</tr>
+		</c:forEach>
+	</table>
+	</div>
+	</div>
 </body>
 </html>

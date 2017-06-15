@@ -5,6 +5,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Cadastro de Veículo</title>
+	<link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet">
+	<link href="<c:url value="/js/bootstrap.js"/>" rel="stylesheet">
 </head>
 <body>
 	<h3>Cadastro de Veículo</h3>

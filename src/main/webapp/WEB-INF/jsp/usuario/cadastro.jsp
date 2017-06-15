@@ -4,31 +4,47 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link href="css/style.css" rel="stylesheet">
-	<link href="css/bootstrap.css" rel="stylesheet">
 	<title>Cadastro de Usuário</title>
+	<link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet">
+	<link href="<c:url value="/js/bootstrap.js"/>" rel="stylesheet">
+	<c:import url="../login/index.jsp"></c:import>	
 </head>
 <body>
-	<h3>Cadastro de Usuário</h3>
-	<small>Novo</small>
-	<form action="${linkTo[UsuarioController].salvar()}" method="post">
-		<div class="form-group">
-			<label>Código</label>
-			<input class="form-control" type="hidden" name="usuario.codigo" value="${usuario.codigo}" disabled="disabled"/>
-		</div>
-		<div class="form-group">		
-			<label>Nome</label>
-			<input class="form-control" type="text" name="usuario.nome" value="${usuario.nome}"/>
-		</div>
-		<div class="form-group">	
-			<label>Login</label>
-			<input class="form-control" type="text" name="usuario.login" value="${usuario.login}"/>
-		</div>
-		<div class="form-group">	
-			<label>Senha</label>
-			<input class="form-control" type="password" name="usuario.senha" value="${usuario.senha}"/>
-		</div>
-		<input type="submit"/>
-	</form>
+	<br>
+	<br>
+	<br>
+	<div class="col-sm-6">
+		<h3>Cadastro de Usuário <small> - Novo</small></h3>
+		<br>
+		<form class="form-horizontal" action="${linkTo[UsuarioController].salvar()}" method="post">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">Código:</label>
+				<div class="col-sm-2">
+					<input class="form-control" type="text" name="usuario.codigo" value="${usuario.codigo}" disabled="disabled"/>
+				</div>				
+			</div>
+			<div class="form-group">		
+				<label class="col-sm-2 control-label">Nome:</label>
+				<div class="col-sm-6">
+					<input class="form-control" type="text" name="usuario.nome" value="${usuario.nome}"/>
+				</div>
+			</div>
+			
+			<div class="form-group">	
+				<label class="col-sm-2 control-label">Login:</label>
+				<div class="col-sm-6">
+					<input class="form-control" type="text" name="usuario.login" value="${usuario.login}"/>
+				</div>
+			</div>
+			<div class="form-group">	
+				<label class="col-sm-2 control-label">Senha:</label>
+				<div class="col-sm-6">
+					<input class="form-control" type="password" name="usuario.senha" value="${usuario.senha}"/>
+				</div>
+			</div>
+			<a type="button" class="btn btn-default" href="${linkTo[LoginController].index()}">Voltar</a>
+			<button type="submit" class="btn btn-success">Salvar</button>
+		</form>
+	</div>
 </body>
 </html>
