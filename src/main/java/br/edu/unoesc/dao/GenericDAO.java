@@ -51,7 +51,7 @@ public abstract class GenericDAO<T extends MeuModelo> {
 			desconectar();
 		}
 	}
-	
+
 	public void editar(T objeto, Class<T> tipo) throws MinhaExceptionDAO {
 		conectar();
 		EntityTransaction et = em.getTransaction();
@@ -112,5 +112,4 @@ public abstract class GenericDAO<T extends MeuModelo> {
 		desconectar();
 		return objeto;
 	}
-
 }
