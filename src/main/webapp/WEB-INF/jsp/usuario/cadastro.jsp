@@ -13,7 +13,9 @@
 	<br>
 	<br>
 	<br>
-	<div class="col-sm-6">
+	<div class="container">
+	<div class="col-md-6">
+	<div class="form-area">
 		<h3>Cadastro de Usuário <small> - Novo</small></h3>
 		<br>
 		<form class="form-horizontal" action="${linkTo[UsuarioController].salvar()}" method="post">
@@ -45,6 +47,8 @@
 			<a type="button" class="btn btn-default" href="${linkTo[LoginController].index()}">Voltar</a>
 			<button type="submit" class="btn btn-success">Salvar</button>
 		</form>
+	</div>
+	</div>
 	</div>
 </body>
 </html>

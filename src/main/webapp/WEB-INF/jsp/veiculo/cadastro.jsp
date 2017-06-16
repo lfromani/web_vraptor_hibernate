@@ -13,49 +13,53 @@
 	<br>
 	<br>
 	<br>
-	<div class="col-sm-6">
+	<div class="container">
+	<div class="col-md-6">
+	<div class="form-area">
 		<h3>Cadastro de Veículo <small> - Novo</small></h3>
 		<br>
 		<form class="form-horizontal" action="${linkTo[VeiculoController].salvar()}" method="post">
 			<div class="form-group">
-				<label class="col-sm-2 control-label">Código</label>
+				<label class="col-sm-2 control-label">Código:</label>
 				<div class="col-sm-2">
 					<input class="form-control" type="text" name="veiculo.codigo" value="${veiculo.codigo}" disabled="disabled"/>	
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="col-sm-2 control-label">Nome</label>
-				<div class="col-sm-4">
+				<label class="col-sm-2 control-label">Nome:</label>
+				<div class="col-sm-6">
 					<input class="form-control" type="text" name="veiculo.nome" value="${veiculo.nome}"/>				
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="col-sm-2 control-label">Ano</label>
-				<div class="col-sm-4">
+				<label class="col-sm-2 control-label">Ano:</label>
+				<div class="col-sm-6">
 					<input class="form-control" type="text" name="veiculo.ano" value="${veiculo.ano}"/>				
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="col-sm-2 control-label">Placa</label>
-				<div class="col-sm-4">
+				<label class="col-sm-2 control-label">Placa:</label>
+				<div class="col-sm-6">
 					<input class="form-control" type="text" name="veiculo.placa" value="${veiculo.placa}"/>				
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="col-sm-2 control-label">Cor</label>
-				<div class="col-sm-4">
+				<label class="col-sm-2 control-label">Cor:</label>
+				<div class="col-sm-6">
 					<input class="form-control" type="text" name="veiculo.cor" value="${veiculo.cor}"/>				
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="col-sm-2 control-label">Vaga</label>
-				<div class="col-sm-4">
+				<label class="col-sm-2 control-label">Vaga:</label>
+				<div class="col-sm-6">
 					<input class="form-control" type="text" name="veiculo.vaga" value="${veiculo.vaga}"/>				
 				</div>
 			</div>
 			<a type="button" class="btn btn-default" href="${linkTo[LoginController].index()}">Voltar</a>
 			<button type="submit" class="btn btn-success">Salvar</button>
 		</form>
+		</div>
+		</div>
 	</div>
 </body>
 </html>

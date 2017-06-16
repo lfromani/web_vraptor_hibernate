@@ -13,20 +13,19 @@
 	<br>
 	<br>
 	<br>
-	<div class="col-sm-8">
-	<div class="table-responsive">
-	<table class="table table-bordered">
+	<div style="margin: 2% 20% 20% 20%" class="container-fluid">
+	<table class="table table-bordered table-striped">
 	<tr style="text-align: center;">
 				<td style="width: 5%"><b>Código</b></td>
-				<td style="width: 19%"><b>Nome</b></td>
-				<td style="width: 15%"><b>Ano</b></td>
-				<td style="width: 19%"><b>Placa</b></td>
-				<td style="width: 19%"><b>Cor</b></td>
+				<td style="width: 20%"><b>Nome</b></td>
+				<td style="width: 10%"><b>Ano</b></td>
+				<td style="width: 20%"><b>Placa</b></td>
+				<td style="width: 20%"><b>Cor</b></td>
 				<td style="width: 10%"><b>Vaga</b></td>
-				<td style="width: 10%"></td>
+				<td style="width: 20%"></td>
 			</tr>
 		<c:forEach var="veiculo" items="${resultado}">
-			<tr>
+			<tr style="text-align: center">
 				<td align="center"><c:out value="${veiculo.codigo}"/></td>
 				<td align="center"><c:out value="${veiculo.nome}"/></td>
 				<td align="center"><c:out value="${veiculo.ano}"/></td>
@@ -44,7 +43,6 @@
 			</tr>
 		</c:forEach>
 	</table>
-	</div>
 	</div>
 </body>
 </html>

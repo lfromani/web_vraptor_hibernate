@@ -11,12 +11,17 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
-          		<a class="navbar-brand" href="${linkTo[LoginController].index()}">Home</a>
+          		<a class="navbar-brand" href="${linkTo[LoginController].index()}">
+          			<span class="glyphicon glyphicon-home"></span>
+          		</a>
           		<a class="navbar-brand" href="${linkTo[VeiculoController].cadastro()}">Cadastro veículo</a>
           		<a class="navbar-brand" href="${linkTo[VeiculoController].listar()}">Lista veículo</a>
           		<a class="navbar-brand" href="${linkTo[UsuarioController].cadastro()}">Cadastro usuário</a>
           		<a class="navbar-brand" href="${linkTo[UsuarioController].listar()}">Lista usuário</a>
 			</div>
+			<a style="float: right !important" class="navbar-brand" href="${linkTo[IndexController].index()}">
+				<span class="glyphicon glyphicon-log-out"></span>
+			</a>
 		</div>
 	</nav>
 </body>

@@ -13,14 +13,13 @@
 	<br>
 	<br>
 	<br>
-	<div class="col-sm-8">
-	<div class="table-responsive">
-	<table class="table table-bordered">
+	<div style="margin: 2% 20% 20% 20%" class="container-fluid">
+	<table class="table table-bordered table-striped">
 	<tr style="text-align: center;">
 				<td style="width: 10%"><b>Código</b></td>
-				<td style="width: 50%"><b>Nome</b></td>
-				<td style="width: 20%"><b>Login</b></td>
-				<td style="width: 9%"></td>
+				<td style="width: 45%"><b>Nome</b></td>
+				<td style="width: 30%"><b>Login</b></td>
+				<td style="width: 10%"></td>
 			</tr>
 		<c:forEach var="usuario" items="${resultado}">
 			<tr>
@@ -38,7 +37,6 @@
 			</tr>
 		</c:forEach>
 	</table>
-	</div>
 	</div>
 </body>
 </html>
