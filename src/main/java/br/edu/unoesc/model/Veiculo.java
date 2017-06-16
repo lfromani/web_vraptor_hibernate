@@ -9,10 +9,10 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 
-@NamedQueries({ @NamedQuery(name = Veiculo.LISTAR, query = "select v from Veiculo v"),
-		@NamedQuery(name = Veiculo.PESQUISAR_POR_NOME, query = "select v from Veiculo v where v.nome like :NOME"),
-		@NamedQuery(name = Veiculo.PESQUISAR_POR_PLACA, query = "select v from Veiculo v where v.placa like :PLACA"),
-		@NamedQuery(name = Veiculo.PESQUISAR_POR_ANO, query = "select v from Veiculo v where v.ano like :ANO") })
+@NamedQueries({ 
+	@NamedQuery(name = Veiculo.LISTAR, query = "select v from Veiculo v"),
+	@NamedQuery(name = Veiculo.PESQUISAR_POR_CODIGO, query = "select v from Veiculo v where v.codigo = :CODIGO"),
+})
 
 @Entity
 public class Veiculo implements Serializable, MeuModelo {
@@ -21,8 +21,7 @@ public class Veiculo implements Serializable, MeuModelo {
 
 	public static final String LISTAR = "veiculo.listar";
 	public static final String PESQUISAR_POR_NOME = "veiculo.pesquisar_por_nome";
-	public static final String PESQUISAR_POR_PLACA = "veiculo.pesquisar_por_placa";
-	public static final String PESQUISAR_POR_ANO = "veiculo.pesquisar_por_ano";
+	public static final String PESQUISAR_POR_CODIGO = "veiculo.pesquisar_por_codigo";
 
 	@Id
 	@GeneratedValue

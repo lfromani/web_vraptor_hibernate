@@ -7,20 +7,44 @@
 	<title>Lista de Veículos</title>
 	<link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet">
 	<link href="<c:url value="/js/bootstrap.js"/>" rel="stylesheet">
+	<c:import url="../login/index.jsp"></c:import>
 </head>
 <body>
-	<br/><a href="${linkTo[LoginController].index()}">Menu</a>
-	<br/><a href="${linkTo[VeiculoController].cadastro()}">Novo veículo</a>
-	<form action='<c:url value="/veiculo/pesquisar"/>'
-	    method="post">
-	    <input type="text" name="filtro"/>
-		<input type="submit" value="Enviar" />
-	</form>
-
-	<c:forEach var="p" items="${resultado}">
-		<br/> <a href="${linkTo[VeiculoController].editar(p.codigo)}">${p.nome}</a>  
-		- ${p.codigo} 
-		<a href="${linkTo[VeiculoController].excluir(p.codigo)}">Excluir</a>
-	</c:forEach>
+	<br>
+	<br>
+	<br>
+	<div class="col-sm-8">
+	<div class="table-responsive">
+	<table class="table table-bordered">
+	<tr style="text-align: center;">
+				<td style="width: 5%"><b>Código</b></td>
+				<td style="width: 19%"><b>Nome</b></td>
+				<td style="width: 15%"><b>Ano</b></td>
+				<td style="width: 19%"><b>Placa</b></td>
+				<td style="width: 19%"><b>Cor</b></td>
+				<td style="width: 10%"><b>Vaga</b></td>
+				<td style="width: 10%"></td>
+			</tr>
+		<c:forEach var="veiculo" items="${resultado}">
+			<tr>
+				<td align="center"><c:out value="${veiculo.codigo}"/></td>
+				<td align="center"><c:out value="${veiculo.nome}"/></td>
+				<td align="center"><c:out value="${veiculo.ano}"/></td>
+				<td align="center"><c:out value="${veiculo.placa}"/></td>
+				<td align="center"><c:out value="${veiculo.cor}"/></td>
+				<td align="center"><c:out value="${veiculo.vaga}"/></td>
+				<td>
+					<a class="btn btn-xs btn-primary" type="button" href="${linkTo[VeiculoController].visualiza(veiculo.codigo)}">
+						<span style="padding: 2px" class="glyphicon glyphicon-pencil"></span>
+					</a>
+					<a class="btn btn-xs btn-danger" type="button" href="${linkTo[VeiculoController].excluir(veiculo.codigo)}">
+						<span style="padding: 2px" class="glyphicon glyphicon-trash"></span>
+					</a>
+				</td>
+			</tr>
+		</c:forEach>
+	</table>
+	</div>
+	</div>
 </body>
 </html>

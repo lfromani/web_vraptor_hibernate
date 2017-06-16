@@ -28,6 +28,11 @@ public class UsuarioController {
 		result.include("usuario", this.usuarioSelecionado);
 	}
 
+	@Get("/visualiza")
+	public void visualiza() {
+		result.include("usuario", this.usuarioSelecionado);
+	}
+
 	@Get("/listar")
 	public void listar() {
 		result.include("resultado", usuarioDAO.listar(Usuario.LISTAR, Usuario.class));
@@ -50,12 +55,6 @@ public class UsuarioController {
 		result.include("resultado", usuarios);
 	}
 
-	@Post("/pesquisar")
-	public void pesquisar(String filtro) {
-		List<Usuario> usuarios = usuarioDAO.pesquisarPorNome(filtro, Usuario.PESQUISAR_POR_NOME, Usuario.class);
-		result.forwardTo(UsuarioController.class).listar(usuarios);
-	}
-
 	@Get("/excluir/{codigo}")
 	public void excluir(Long codigo) {
 		Usuario usu = new Usuario();
@@ -68,11 +67,20 @@ public class UsuarioController {
 		result.forwardTo(UsuarioController.class).listar();
 	}
 
-	@Get("/editar/{codigo}")
-	public void editar(Long codigo) {
+	@Get("/visualiza/{codigo}")
+	public void visualiza(Long codigo) {
 		this.usuarioSelecionado = (Usuario) usuarioDAO.pesquisarPorCodigo(codigo, Usuario.PESQUISAR_POR_CODIGO,
 				Usuario.class);
-		result.forwardTo(UsuarioController.class).cadastro();
+		result.forwardTo(UsuarioController.class).visualiza();
 	}
 
+	@Post("/visualiza")
+	public void editar(Usuario usuario) {
+		try {
+			usuarioDAO.editar(usuario, Usuario.class);
+		} catch (MinhaExceptionDAO e) {
+			e.printStackTrace();
+		}
+		result.forwardTo(UsuarioController.class).listar();
+	}
 }

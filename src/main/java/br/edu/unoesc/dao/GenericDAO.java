@@ -51,6 +51,25 @@ public abstract class GenericDAO<T extends MeuModelo> {
 			desconectar();
 		}
 	}
+	
+	public void editar(T objeto, Class<T> tipo) throws MinhaExceptionDAO {
+		conectar();
+		EntityTransaction et = em.getTransaction();
+		try {
+			et.begin();
+			if (objeto.getCodigo() != null) {
+				em.merge(objeto);
+			} else {
+				em.merge(objeto);
+			}
+			et.commit();
+		} catch (Exception ex) {
+			et.rollback();
+			throw new MinhaExceptionDAO(ex.getMessage());
+		} finally {
+			desconectar();
+		}
+	}
 
 	public void excluir(T objeto, Class<T> tipo) throws MinhaExceptionDAO {
 		conectar();
