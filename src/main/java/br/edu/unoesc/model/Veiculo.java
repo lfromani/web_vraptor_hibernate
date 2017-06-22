@@ -9,10 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 
-@NamedQueries({ 
-	@NamedQuery(name = Veiculo.LISTAR, query = "select v from Veiculo v"),
-	@NamedQuery(name = Veiculo.PESQUISAR_POR_CODIGO, query = "select v from Veiculo v where v.codigo = :CODIGO"),
-})
+@NamedQueries({ @NamedQuery(name = Veiculo.LISTAR, query = "select v from Veiculo v"),
+		@NamedQuery(name = Veiculo.PESQUISAR_POR_CODIGO, query = "select v from Veiculo v where v.codigo = :CODIGO"), })
 
 @Entity
 public class Veiculo implements Serializable, MeuModelo {

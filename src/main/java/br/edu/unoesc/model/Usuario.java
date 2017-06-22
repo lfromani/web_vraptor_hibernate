@@ -1,6 +1,7 @@
 package br.edu.unoesc.model;
 
 import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,11 +10,11 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 
 @NamedQueries({ @NamedQuery(name = Usuario.LISTAR, query = "select u from Usuario u"),
+
 		@NamedQuery(name = Usuario.PESQUISAR_POR_NOME, query = "select u from Usuario u where u.nome like :NOME"),
 		@NamedQuery(name = Usuario.PESQUISAR_POR_CODIGO, query = "select u from Usuario u where u.codigo = :CODIGO"),
 		@NamedQuery(name = Usuario.PESQUISAR_POR_LOGIN, query = "select u from Usuario u where u.login = :LOGIN"),
-		@NamedQuery(name = Usuario.PESQUISAR_POR_SENHA, query = "select u from Usuario u where u.senha = :SENHA"),
-})
+		@NamedQuery(name = Usuario.PESQUISAR_POR_SENHA, query = "select u from Usuario u where u.senha = :SENHA"), })
 
 @Entity
 public class Usuario implements Serializable, MeuModelo {

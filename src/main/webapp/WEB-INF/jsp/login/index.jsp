@@ -18,6 +18,9 @@
           		<a class="navbar-brand" href="${linkTo[VeiculoController].listar()}">Lista veículo</a>
           		<a class="navbar-brand" href="${linkTo[UsuarioController].cadastro()}">Cadastro usuário</a>
           		<a class="navbar-brand" href="${linkTo[UsuarioController].listar()}">Lista usuário</a>
+          		<a class="navbar-brand" href="${linkTo[DuracaoController].cadastro()}">Cadastro Vaga</a>
+          		<a class="navbar-brand" href="${linkTo[DuracaoController].listar()}">Lista Vaga</a>
+          		
 			</div>
 			<a style="float: right !important" class="navbar-brand" href="${linkTo[IndexController].index()}">
 				<span class="glyphicon glyphicon-log-out"></span>
