@@ -34,20 +34,16 @@ public class Duracao implements Serializable, MeuModelo {
 	public Duracao() {
 		super();
 	}
-	public Duracao(Long codigo, String vaga, String entrada, String saida, String tempo) {
+	public Duracao(Long codigo, String vaga, String entrada, String tempo) {
 		super();
 		this.codigo = codigo;
 		this.vaga = vaga;
 		this.entrada = entrada;
-		this.saida = saida;
 		this.tempo = tempo;
 	}
 
 	@Column(nullable = false)
 	private String entrada;
-
-	@Column(nullable = false)
-	private String saida;
 
 	public Long getCodigo() {
 		return codigo;
@@ -72,15 +68,6 @@ public class Duracao implements Serializable, MeuModelo {
 	public void setEntrada(String entrada) {
 		this.entrada = entrada;
 	}
-
-	public String getSaida() {
-		return saida;
-	}
-
-	public void setSaida(String saida) {
-		this.saida = saida;
-	}
-
 	public String getTempo() {
 		return tempo;
 	}

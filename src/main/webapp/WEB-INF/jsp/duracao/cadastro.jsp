@@ -41,12 +41,6 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">Hora de Saída:</label>
-						<div class="col-sm-6">
-							<input class="form-control" type="password" name="duracao.saida" value="${duracao.saida}" />
-						</div>
-					</div>
-					<div class="form-group">
 						<div class="col-sm-6 col-sm-offset-2">
 							<select class="form-control" name="Tempos" id="tempos">
 								<option value="180">3 Horas</option>
@@ -64,6 +58,9 @@
 							</select>
 						</div>
 					</div>
+					<br>
+					<br>
+					<br>
 					<a type="button" class="btn btn-default" href="${linkTo[LoginController].index()}">Voltar</a>
 					<button type="submit" class="btn btn-success">Salvar</button>
 				</form>

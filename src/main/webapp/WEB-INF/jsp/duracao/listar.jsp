@@ -18,7 +18,6 @@
 	<tr style="text-align: center;">
 	            <td style="width: 10%"><b>Código</b></td>
 				<td style="width: 20%"><b>Hora entrada</b></td>
-				<td style="width: 20%"><b>Hora saída</b></td>
 				<td style="width: 20%"><b>Número vaga</b></td>
 				<td style="width: 20%"><b>Tempo</b></td>
 				<td style="width: 10%"></td>
@@ -27,7 +26,6 @@
 			<tr>
 				<td align="center"><c:out value="${duracao.codigo}"/></td>
 				<td align="center"><c:out value="${duracao.entrada}"/></td>
-				<td align="center"><c:out value="${duracao.saida}"/></td>
 				<td align="center"><c:out value="${duracao.vaga}"/></td>
 				<td align="center"><c:out value="${duracao.tempo}"/></td>
 				<td>
