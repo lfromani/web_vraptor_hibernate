@@ -32,7 +32,6 @@
 				<td align="center"><c:out value="${veiculo.placa}"/></td>
 				<td align="center"><c:out value="${veiculo.cor}"/></td>
 				<td align="center"><c:out value="${veiculo.vaga}"/></td>
-				
 				<td>
 					<a class="btn btn-xs btn-primary" type="button" href="${linkTo[VeiculoController].visualiza(veiculo.codigo)}">
 						<span style="padding: 2px" class="glyphicon glyphicon-pencil"></span>

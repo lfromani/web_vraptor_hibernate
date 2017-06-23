@@ -23,46 +23,40 @@
 				<br>
 				<form class="form-horizontal" action="${linkTo[DuracaoController].salvar()}" method="post">
 					<div class="form-group">
-						<label class="col-sm-2 control-label">Código:</label>
+						<label class="col-sm-3 control-label">Código</label>
 						<div class="col-sm-2">
-							<input class="form-control" type="text" name="duracao.codigo" value="${duracao.codigo}" disabled="disabled" />
+							<input class="form-control" type="text" name="duracao.codigo" value="${duracao.codigo}" disabled="disabled"/>
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">Número Vaga:</label>
+						<label class="col-sm-3 control-label">Número vaga*</label>
 						<div class="col-sm-6">
-							<input class="form-control" type="text" name="duracao.vaga"	value="${duracao.vaga}" />
+							<input class="form-control" type="text" name="duracao.vaga"	value="${duracao.vaga}" required="required"  placeholder="Prencher valor"/>
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">Hora de Entrada:</label>
+						<label class="col-sm-3 control-label">Hora entrada*</label>
 						<div class="col-sm-6">
-							<input class="form-control" type="text" name="duracao.entrada" value="${duracao.entrada}" />
+							<input class="form-control" type="time" name="duracao.entrada" value="${duracao.entrada}" />
 						</div>
 					</div>
 					<div class="form-group">
-						<div class="col-sm-6 col-sm-offset-2">
-							<select class="form-control" name="Tempos" id="tempos">
-								<option value="180">3 Horas</option>
-								<option value="165">2h45 min</option>
-								<option value="150">2h30 min</option>
-								<option value="135">2h15 min</option>
-								<option value="120">2 Horas</option>
-								<option value="105">1h45 min</option>
-								<option value="90">1h30 min</option>
-								<option value="75">1h15 min</option>
-								<option value="60">1 Hora</option>
-								<option value="45">45 min</option>
-								<option value="30">30 min</option>
-								<option value="15">15 min</option>
-							</select>
+					<label class="col-sm-3 control-label">Tempo*</label>
+						<div class="col-sm-6">
+							<label class="radio-inline">
+								<input type="radio" name="duracao.tempo" value="30 minutos" checked="checked">
+								30 minutos
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="duracao.tempo" value="1 hora">
+								1 hora
+							</label>
 						</div>
 					</div>
+				
 					<br>
-					<br>
-					<br>
-					<a type="button" class="btn btn-default" href="${linkTo[LoginController].index()}">Voltar</a>
-					<button type="submit" class="btn btn-success">Salvar</button>
+					<a type="button" class="col-sm-offset-3 btn btn-default" href="${linkTo[LoginController].index()}">Cancelar</a>
+					<button type="submit" class="btn btn-primary">Salvar</button>
 				</form>
 			</div>
 		</div>
