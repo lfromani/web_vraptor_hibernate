@@ -59,7 +59,7 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">Nº Vaga:</label>
+						<label class="col-sm-2 control-label">Número Vaga:</label>
 						<div class="col-sm-6">
 							<input class="form-control" type="text" name="veiculo.vaga"
 								value="${veiculo.vaga}" />

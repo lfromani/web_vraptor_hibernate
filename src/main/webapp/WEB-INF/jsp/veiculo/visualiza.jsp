@@ -50,7 +50,7 @@
 				</div>
 			</div>
 			<a type="button" class="btn btn-default" href="${linkTo[VeiculoController].listar()}">Voltar</a>
-			<button type="submit" class="btn btn-success">Editar</button>
+			<button type="submit" class="btn btn-success">Salvar</button>
 		</form>
 	</div>
 </body>

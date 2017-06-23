@@ -13,16 +13,16 @@
 	<br>
 	<br>
 	<br>
-	<div style="margin: 2% 20% 20% 20%" class="container-fluid">
+	<div style="margin: 2% 10% 10% 10%" class="container-fluid">
 	<table class="table table-bordered table-striped">
 	<tr style="text-align: center;">
-				<td style="width: 5%"><b>Código</b></td>
+				<td style="width: 10%"><b>Código</b></td>
 				<td style="width: 20%"><b>Nome</b></td>
-				<td style="width: 10%"><b>Ano</b></td>
-				<td style="width: 20%"><b>Placa</b></td>
-				<td style="width: 20%"><b>Cor</b></td>
+				<td style="width: 15%"><b>Ano</b></td>
+				<td style="width: 10%"><b>Placa</b></td>
+				<td style="width: 15%"><b>Cor</b></td>
 				<td style="width: 10%"><b>Vaga</b></td>
-				<td style="width: 20%"></td>
+				<td style="width: 10%"><b>Opções</b></td>
 			</tr>
 		<c:forEach var="veiculo" items="${resultado}">
 			<tr style="text-align: center">
@@ -32,7 +32,6 @@
 				<td align="center"><c:out value="${veiculo.placa}"/></td>
 				<td align="center"><c:out value="${veiculo.cor}"/></td>
 				<td align="center"><c:out value="${veiculo.vaga}"/></td>
-				
 				<td>
 					<a class="btn btn-xs btn-primary" type="button" href="${linkTo[VeiculoController].visualiza(veiculo.codigo)}">
 						<span style="padding: 2px" class="glyphicon glyphicon-pencil"></span>

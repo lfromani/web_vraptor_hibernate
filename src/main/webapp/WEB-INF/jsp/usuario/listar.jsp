@@ -13,13 +13,13 @@
 	<br>
 	<br>
 	<br>
-	<div style="margin: 2% 20% 20% 20%" class="container-fluid">
+	<div style="margin: 2% 10% 10% 10%" class="container-fluid">
 	<table class="table table-bordered table-striped">
 	<tr style="text-align: center;">
 				<td style="width: 10%"><b>Código</b></td>
-				<td style="width: 45%"><b>Nome</b></td>
+				<td style="width: 30%"><b>Nome</b></td>
 				<td style="width: 30%"><b>Login</b></td>
-				<td style="width: 10%"></td>
+				<td style="width: 5%"><b>Opções</b></td>
 			</tr>
 		<c:forEach var="usuario" items="${resultado}">
 			<tr>
