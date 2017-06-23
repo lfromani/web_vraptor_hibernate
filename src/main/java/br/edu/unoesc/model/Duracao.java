@@ -21,6 +21,7 @@ public class Duracao implements Serializable, MeuModelo {
 
 
 	private static final long serialVersionUID = -7894272508977734913L;
+	
 	@Id
 	@GeneratedValue
 	private Long codigo;
