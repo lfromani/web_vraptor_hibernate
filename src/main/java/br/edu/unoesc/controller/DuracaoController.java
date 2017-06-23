@@ -29,17 +29,14 @@ public class DuracaoController {
 	public void cadastro() {
 		result.include("duracao", this.duracaoSelecionado);
 	}
-
 	@Get("/visualiza")
 	public void visualiza() {
 		result.include("duracao", this.duracaoSelecionado);
 	}
-
 	@Get("/listar")
 	public void listar() {
 		result.include("resultado", duracaoDAO.listar(Duracao.LISTAR, Duracao.class));
 	}
-
 	@Post("/salvar")
 	public void salvar(Duracao duracao) {
 		if (duracao != null) {
@@ -67,7 +64,6 @@ public class DuracaoController {
 			e.printStackTrace();
 		}
 		result.forwardTo(DuracaoController.class).listar();
-
 	}
 
 	@Get("/visualiza/{codigo}")
@@ -86,5 +82,4 @@ public class DuracaoController {
 		}
 		result.forwardTo(DuracaoController.class).listar();
 	}
-
 }
