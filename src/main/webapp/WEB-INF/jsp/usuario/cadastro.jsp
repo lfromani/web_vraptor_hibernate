@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Cadastro de Usuário</title>
+	<title>Cadastro de usuário</title>
 	<link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet">
 	<link href="<c:url value="/js/bootstrap.js"/>" rel="stylesheet">
 	<c:import url="../login/index.jsp"></c:import>	
@@ -16,7 +16,7 @@
 	<div class="container">
 	<div class="col-md-6">
 	<div class="form-area">
-		<h3>Cadastro de Usuário <small> - Novo</small></h3>
+		<h3>Cadastro de usuário <small> - Novo</small></h3>
 		<br>
 		<form class="form-horizontal" action="${linkTo[UsuarioController].salvar()}" method="post">
 			<div class="form-group">
@@ -26,26 +26,27 @@
 				</div>				
 			</div>
 			<div class="form-group">		
-				<label class="col-sm-2 control-label">Nome:</label>
+				<label class="col-sm-2 control-label">Nome*</label>
 				<div class="col-sm-6">
-					<input class="form-control" type="text" name="usuario.nome" value="${usuario.nome}"/>
+					<input class="form-control" type="text" name="usuario.nome" value="${usuario.nome}"required="required"  placeholder="Nome completo"/>
 				</div>
 			</div>
 			
 			<div class="form-group">	
-				<label class="col-sm-2 control-label">Login:</label>
+				<label class="col-sm-2 control-label">Email*</label>
 				<div class="col-sm-6">
-					<input class="form-control" type="text" name="usuario.login" value="${usuario.login}"/>
+					<input class="form-control" type="text" name="usuario.login" value="${usuario.email}"required="required"  placeholder="Email@exemplo.com"/>
 				</div>
 			</div>
 			<div class="form-group">	
-				<label class="col-sm-2 control-label">Senha:</label>
+				<label class="col-sm-2 control-label">Senha*</label>
 				<div class="col-sm-6">
-					<input class="form-control" type="password" name="usuario.senha" value="${usuario.senha}"/>
+					<input class="form-control" type="password" name="usuario.senha" value="${usuario.senha}"required="required"  placeholder="Minimo 6 caracteres"/>
 				</div>
 			</div>
-			<a type="button" class="btn btn-default" href="${linkTo[LoginController].index()}">Voltar</a>
-			<button type="submit" class="btn btn-success">Salvar</button>
+			<br>
+			<a type="button" class="col-sm-offset-2 btn btn-default" href="${linkTo[LoginController].index()}">Cancelar</a>
+			<button type="submit" class="btn btn-primary">Salvar</button>
 		</form>
 	</div>
 	</div>

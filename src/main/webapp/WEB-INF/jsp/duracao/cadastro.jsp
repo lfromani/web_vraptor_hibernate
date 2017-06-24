@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Duracão da Vaga</title>
+<title>Duracão da vaga</title>
 <link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet">
 <link href="<c:url value="/js/bootstrap.js"/>" rel="stylesheet">
 <c:import url="../login/index.jsp"></c:import>
@@ -18,7 +18,7 @@
 		<div class="col-md-6">
 			<div class="form-area">
 				<h3>
-					Cadastro Vaga <small> - Novo</small>
+					Cadastro vaga <small> - Novo</small>
 				</h3>
 				<br>
 				<form class="form-horizontal" action="${linkTo[DuracaoController].salvar()}" method="post">
@@ -31,7 +31,7 @@
 					<div class="form-group">
 						<label class="col-sm-3 control-label">Número vaga*</label>
 						<div class="col-sm-6">
-							<input class="form-control" type="text" name="duracao.vaga"	value="${duracao.vaga}" required="required"  placeholder="Prencher valor"/>
+							<input class="form-control" type="text" name="duracao.vaga"	value="${duracao.vaga}" required="required"  placeholder="Número da vaga escolhida"/>
 						</div>
 					</div>
 					<div class="form-group">

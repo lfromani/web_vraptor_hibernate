@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Lista de Usuários</title>
+	<title>Lista de usuários</title>
 	<link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet">
 	<link href="<c:url value="/js/bootstrap.js"/>" rel="stylesheet">
 	<c:import url="../login/index.jsp"></c:import>
@@ -18,14 +18,14 @@
 	<tr style="text-align: center;">
 				<td style="width: 10%"><b>Código</b></td>
 				<td style="width: 30%"><b>Nome</b></td>
-				<td style="width: 30%"><b>Login</b></td>
+				<td style="width: 30%"><b>Email</b></td>
 				<td style="width: 5%"><b>Opções</b></td>
 			</tr>
 		<c:forEach var="usuario" items="${resultado}">
 			<tr>
 				<td align="center"><c:out value="${usuario.codigo}"/></td>
 				<td align="center"><c:out value="${usuario.nome}"/></td>
-				<td align="center"><c:out value="${usuario.login}"/></td>
+				<td align="center"><c:out value="${usuario.email}"/></td>
 				<td>
 					<a class="btn btn-xs btn-primary" type="button" href="${linkTo[UsuarioController].visualiza(usuario.codigo)}">
 						<span style="padding: 2px" class="glyphicon glyphicon-pencil"></span>

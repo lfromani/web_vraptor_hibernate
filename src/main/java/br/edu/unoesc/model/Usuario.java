@@ -13,7 +13,7 @@ import javax.persistence.NamedQuery;
 
 		@NamedQuery(name = Usuario.PESQUISAR_POR_NOME, query = "select u from Usuario u where u.nome like :NOME"),
 		@NamedQuery(name = Usuario.PESQUISAR_POR_CODIGO, query = "select u from Usuario u where u.codigo = :CODIGO"),
-		@NamedQuery(name = Usuario.PESQUISAR_POR_LOGIN, query = "select u from Usuario u where u.login = :LOGIN"),
+		@NamedQuery(name = Usuario.PESQUISAR_POR_EMAIL, query = "select u from Usuario u where u.email = :EMAIL"),
 		@NamedQuery(name = Usuario.PESQUISAR_POR_SENHA, query = "select u from Usuario u where u.senha = :SENHA"), })
 
 @Entity
@@ -24,7 +24,7 @@ public class Usuario implements Serializable, MeuModelo {
 	public static final String LISTAR = "usuario.listar";
 	public static final String PESQUISAR_POR_NOME = "usuario.pesquisar_por_nome";
 	public static final String PESQUISAR_POR_CODIGO = "usuario.pesqusar_por_codigo";
-	public static final String PESQUISAR_POR_LOGIN = "usuario.pesquisar_por_login";
+	public static final String PESQUISAR_POR_EMAIL = "usuario.pesquisar_por_email";
 	public static final String PESQUISAR_POR_SENHA = "usuario.pesquisar_por_senha";
 
 	@Id
@@ -35,7 +35,7 @@ public class Usuario implements Serializable, MeuModelo {
 	private String nome;
 
 	@Column(nullable = false)
-	private String login;
+	private String email;
 
 	@Column(nullable = false)
 	private String senha;
@@ -48,7 +48,7 @@ public class Usuario implements Serializable, MeuModelo {
 		super();
 		this.codigo = codigo;
 		this.nome = nome;
-		this.login = login;
+		this.email = login;
 		this.senha = senha;
 	}
 
@@ -69,11 +69,11 @@ public class Usuario implements Serializable, MeuModelo {
 	}
 
 	public String getLogin() {
-		return login;
+		return email;
 	}
 
 	public void setLogin(String login) {
-		this.login = login;
+		this.email = login;
 	}
 
 	public String getSenha() {

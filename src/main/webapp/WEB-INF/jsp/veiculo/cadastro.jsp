@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Cadastro de Veículo</title>
+<title>Cadastro de veículo</title>
 <link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet">
 <link href="<c:url value="/js/bootstrap.js"/>" rel="stylesheet">
 <c:import url="../login/index.jsp"></c:import>
@@ -18,57 +18,50 @@
 		<div class="col-md-6">
 			<div class="form-area">
 				<h3>
-					Cadastro de Veículo <small> - Novo</small>
+					Cadastro de veículo <small> - Novo</small>
 				</h3>
 				<br>
 				<form class="form-horizontal"
 					action="${linkTo[VeiculoController].salvar()}" method="post">
 					<div class="form-group">
-						<label class="col-sm-2 control-label">Código:</label>
+						<label class="col-sm-3 control-label">Código:</label>
 						<div class="col-sm-2">
 							<input class="form-control" type="text" name="veiculo.codigo"
 								value="${veiculo.codigo}" disabled="disabled" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">Nome:</label>
+						<label class="col-sm-3 control-label">Nome*</label>
 						<div class="col-sm-6">
-							<input class="form-control" type="text" name="veiculo.nome"
-								value="${veiculo.nome}" />
+							<input class="form-control" type="text" name="veiculo.nome"value="${veiculo.nome}"required="required"  placeholder="Nome do veículo"/>
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">Ano:</label>
+						<label class="col-sm-3 control-label">Ano*</label>
 						<div class="col-sm-6">
-							<input class="form-control" type="text" name="veiculo.ano"
-								value="${veiculo.ano}" />
+							<input class="form-control" type="text" name="veiculo.ano"value="${veiculo.ano}"required="required"placeholder="Ano"/>
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">Placa:</label>
+						<label class="col-sm-3 control-label">Placa*</label>
 						<div class="col-sm-6">
-							<input class="form-control" type="text" name="veiculo.placa"
-								value="${veiculo.placa}" />
+							<input class="form-control" type="text" name="veiculo.placa"value="${veiculo.placa}"required="required"placeholder="Placa"/>
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">Cor:</label>
+						<label class="col-sm-3 control-label">Cor*</label>
 						<div class="col-sm-6">
-							<input class="form-control" type="text" name="veiculo.cor"
-								value="${veiculo.cor}" />
+							<input class="form-control" type="text" name="veiculo.cor"value="${veiculo.cor}"required="required"placeholder="Cor" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label">Número Vaga:</label>
+						<label class="col-sm-3 control-label">Número vaga*</label>
 						<div class="col-sm-6">
-							<input class="form-control" type="text" name="veiculo.vaga"
-								value="${veiculo.vaga}" />
+							<input class="form-control" type="text" name="veiculo.vaga"value="${veiculo.vaga}" required="required"placeholder="Número da vaga"/>
 						</div>
-				
 					</div>
-					<br> <br> <br> <a type="button"
-						class="btn btn-default" href="${linkTo[LoginController].index()}">Voltar</a>
-					<button type="submit" class="btn btn-success">Salvar</button>
+					<br> <a type="button"class="col-sm-offset-3 btn btn-default" href="${linkTo[LoginController].index()}">Cancelar</a>
+					<button type="submit" class="btn btn-primary">Salvar</button>
 				</form>
 			</div>
 		</div>
