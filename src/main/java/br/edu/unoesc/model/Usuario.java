@@ -9,12 +9,14 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 
-@NamedQueries({ @NamedQuery(name = Usuario.LISTAR, query = "select u from Usuario u"),
-
+@NamedQueries({ 
+		@NamedQuery(name = Usuario.LISTAR, query = "select u from Usuario u"),
 		@NamedQuery(name = Usuario.PESQUISAR_POR_NOME, query = "select u from Usuario u where u.nome like :NOME"),
 		@NamedQuery(name = Usuario.PESQUISAR_POR_CODIGO, query = "select u from Usuario u where u.codigo = :CODIGO"),
 		@NamedQuery(name = Usuario.PESQUISAR_POR_LOGIN, query = "select u from Usuario u where u.login = :LOGIN"),
-		@NamedQuery(name = Usuario.PESQUISAR_POR_SENHA, query = "select u from Usuario u where u.senha = :SENHA"), })
+		@NamedQuery(name = Usuario.PESQUISAR_POR_SENHA, query = "select u from Usuario u where u.senha = :SENHA"),
+		@NamedQuery(name = Usuario.LOGAR, query = "select u from Usuario u where u.login = :login and u.senha = :senha"),
+})
 
 @Entity
 public class Usuario implements Serializable, MeuModelo {
@@ -26,6 +28,7 @@ public class Usuario implements Serializable, MeuModelo {
 	public static final String PESQUISAR_POR_CODIGO = "usuario.pesqusar_por_codigo";
 	public static final String PESQUISAR_POR_LOGIN = "usuario.pesquisar_por_login";
 	public static final String PESQUISAR_POR_SENHA = "usuario.pesquisar_por_senha";
+	public static final String LOGAR = "usario.logar";
 
 	@Id
 	@GeneratedValue
