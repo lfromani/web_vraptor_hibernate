@@ -15,11 +15,11 @@
         <h3 class="titulo">Login</h3>
         <label>Usuário</label>
         <br>
-        <input type="text" name="usuario.login" value="${usuario.login}" id="usuario" class="form-control" placeholder="Usuário" required autofocus>
+        <input type="email" name="usuario.email" value="${usuario.email}" id="usuario" class="form-control" placeholder="e-mail" required autofocus>
         <br>
         <label>Senha</label>
         <br>
-        <input type="password" name="usuario.senha" value="${usuario.senha}" id="senha" class="form-control" placeholder="Senha" required>
+        <input type="password" name="usuario.senha" value="${usuario.senha}" id="senha" class="form-control" placeholder="senha" required>
         <br>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
        </div>

@@ -20,6 +20,8 @@
           		<a class="navbar-brand" href="${linkTo[UsuarioController].listar()}">Lista usuário</a>
           		<a class="navbar-brand" href="${linkTo[DuracaoController].cadastro()}">Cadastro vaga</a>
           		<a class="navbar-brand" href="${linkTo[DuracaoController].listar()}">Lista vaga</a>
+          		<a class="navbar-brand" href="${linkTo[ClienteController].cadastro()}">Cadastro cliente</a>
+          		<a class="navbar-brand" href="${linkTo[ClienteController].listar()}">Lista cliente</a>
           		
 			</div>
 			<a style="float: right !important" class="navbar-brand" href="${linkTo[IndexController].index()}">
