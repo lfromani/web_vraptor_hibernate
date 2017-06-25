@@ -21,7 +21,7 @@
 				<td style="width: 15%"><b>CPF</b></td>
 				<td style="width: 10%"><b>Endereço</b></td>
 				<td style="width: 15%"><b>Telefone</b></td>
-				<td style="width: 15%"><b>Opções<b></b></td>
+				<td style="width: 15%"><b>Opções</b></td>
 			</tr>
 		<c:forEach var="cliente" items="${resultado}">
 			<tr style="text-align: center">
