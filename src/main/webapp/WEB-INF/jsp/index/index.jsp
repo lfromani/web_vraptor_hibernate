@@ -13,7 +13,7 @@
       <form class="formLogin" action='<c:url value="/login/index"/>' method="post">
       <div class="well">
         <h3 class="titulo">Login</h3>
-        <label>Usuário</label>
+        <label>E-mail</label>
         <br>
         <input type="email" name="usuario.email" value="${usuario.email}" id="usuario" class="form-control" placeholder="e-mail" required autofocus>
         <br>
