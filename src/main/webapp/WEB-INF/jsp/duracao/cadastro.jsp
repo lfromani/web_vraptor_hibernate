@@ -18,7 +18,7 @@
 		<div class="col-md-6">
 			<div class="form-area">
 				<h3>
-					Cadastro vaga <small> - Novo</small>
+					Cadastro de vaga <small> - Novo</small>
 				</h3>
 				<br>
 				<form class="form-horizontal" action="${linkTo[DuracaoController].salvar()}" method="post">
