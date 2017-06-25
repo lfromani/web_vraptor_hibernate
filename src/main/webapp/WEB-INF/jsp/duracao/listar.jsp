@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Lista de Tempo</title>
+	<title>Lista Tempo</title>
 	<link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet">
 	<link href="<c:url value="/js/bootstrap.js"/>" rel="stylesheet">
 	<c:import url="../login/index.jsp"></c:import>
@@ -20,7 +20,7 @@
 				<td style="width: 20%"><b>Hora entrada</b></td>
 				<td style="width: 20%"><b>Número vaga</b></td>
 				<td style="width: 20%"><b>Tempo</b></td>
-				<td style="width: 10%"><b>Opções</b></td>
+				<td style="width: 15%"><b>Opções</b></td>
 			</tr>
 		<c:forEach var="duracao" items="${resultado}">
 			<tr>
@@ -31,10 +31,14 @@
 				<td>
 					<a class="btn btn-xs btn-primary" type="button" href="${linkTo[DuracaoController].visualiza(duracao.codigo)}">
 						<span style="padding: 2px" class="glyphicon glyphicon-pencil"></span>
+						<strong>Editar</strong>
 					</a>
+					
 					<a class="btn btn-xs btn-danger" type="button" href="${linkTo[DuracaoController].excluir(duracao.codigo)}">
 						<span style="padding: 2px" class="glyphicon glyphicon-trash"></span>
+						<strong>Deletar</strong>
 					</a>
+					
 				</td>
 			</tr>
 		</c:forEach>

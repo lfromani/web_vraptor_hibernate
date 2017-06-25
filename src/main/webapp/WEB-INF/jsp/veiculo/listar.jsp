@@ -17,7 +17,6 @@
 	<table class="table table-bordered table-striped">
 	<tr style="text-align: center;">
 				<td style="width: 10%"><b>Código</b></td>
-				<td style="width: 20%"><b>Nome</b></td>
 				<td style="width: 10%"><b>Ano</b></td>
 				<td style="width: 15%"><b>Placa</b></td>
 				<td style="width: 10%"><b>Cor</b></td>
@@ -28,7 +27,6 @@
 		<c:forEach var="veiculo" items="${resultado}">
 			<tr style="text-align: center">
 				<td align="center"><c:out value="${veiculo.codigo}"/></td>
-				<td align="center"><c:out value="${veiculo.nome}"/></td>
 				<td align="center"><c:out value="${veiculo.ano}"/></td>
 				<td align="center"><c:out value="${veiculo.placa}"/></td>
 				<td align="center"><c:out value="${veiculo.cor}"/></td>
@@ -37,10 +35,14 @@
 				<td>
 					<a class="btn btn-xs btn-primary" type="button" href="${linkTo[VeiculoController].visualiza(veiculo.codigo)}">
 						<span style="padding: 2px" class="glyphicon glyphicon-pencil"></span>
+						<strong>Editar</strong>
 					</a>
+					
 					<a class="btn btn-xs btn-danger" type="button" href="${linkTo[VeiculoController].excluir(veiculo.codigo)}">
 						<span style="padding: 2px" class="glyphicon glyphicon-trash"></span>
+						<strong>Deletar</strong>
 					</a>
+					
 				</td>
 			</tr>
 		</c:forEach>

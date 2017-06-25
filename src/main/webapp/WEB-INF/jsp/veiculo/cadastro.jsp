@@ -31,12 +31,6 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-3 control-label">Nome*</label>
-						<div class="col-sm-6">
-							<input class="form-control" type="text" name="veiculo.nome"value="${veiculo.nome}"required="required"  placeholder="Nome do veículo"/>
-						</div>
-					</div>
-					<div class="form-group">
 						<label class="col-sm-3 control-label">Ano*</label>
 						<div class="col-sm-6">
 							<input class="form-control" type="text" name="veiculo.ano"value="${veiculo.ano}"required="required"placeholder="Ano"/>

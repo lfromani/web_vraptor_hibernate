@@ -63,7 +63,6 @@ public class DuracaoController {
 		}
 		result.forwardTo(DuracaoController.class).listar();
 	}
-
 	@Get("/visualiza/{codigo}")
 	public void visualiza(Long codigo) {
 		this.duracaoSelecionado = (Duracao) duracaoDAO.pesquisarPorCodigo(codigo, Duracao.PESQUISAR_POR_CODIGO,

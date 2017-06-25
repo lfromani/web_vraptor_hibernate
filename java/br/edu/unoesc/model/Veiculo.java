@@ -18,16 +18,13 @@ public class Veiculo implements Serializable, MeuModelo {
 	private static final long serialVersionUID = 3083153010884512596L;
 
 	public static final String LISTAR = "veiculo.listar";
-	public static final String PESQUISAR_POR_NOME = "veiculo.pesquisar_por_nome";
+	public static final String PESQUISAR_POR_MODELO= "veiculo.pesquisar_por_modelo";
 	public static final String PESQUISAR_POR_CODIGO = "veiculo.pesquisar_por_codigo";
 
 	@Id
 	@GeneratedValue
 	private Long codigo;
-
-	@Column(nullable = false)
-	private String nome;
-
+	
 	@Column
 	private String ano;
 
@@ -45,16 +42,17 @@ public class Veiculo implements Serializable, MeuModelo {
 	
 	public Veiculo() {
 		super();
-	}
+	
+}
 
-	public Veiculo(Long codigo, String nome, String ano, String placa, String cor, String marca, String modelo) {
+	public Veiculo(Long codigo, String ano, String placa, String cor, String marca, String modelo) {
 		super();
 		this.codigo = codigo;
-		this.nome = nome;
 		this.ano = ano;
 		this.placa = placa;
 		this.cor = cor;
 		this.marca = marca;
+		this.modelo = modelo;
 	}
 
 	public Long getCodigo() {
@@ -63,14 +61,6 @@ public class Veiculo implements Serializable, MeuModelo {
 
 	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
 	}
 
 	public String getAno() {

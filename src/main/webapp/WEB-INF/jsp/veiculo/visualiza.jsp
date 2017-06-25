@@ -18,13 +18,6 @@
 		<br>
 		<form class="form-horizontal" action="${linkTo[VeiculoController].editar()}" method="post">
 			<input class="form-control" type="hidden" name="veiculo.codigo" value="${veiculo.codigo}"/>
-			<div class="form-group">		
-				<label class="col-sm-2 control-label">Nome:</label>
-				<div class="col-sm-6">
-					<input class="form-control" type="text" name="veiculo.nome" value="${veiculo.nome}"/>
-				</div>
-			</div>
-			
 			<div class="form-group">	
 				<label class="col-sm-2 control-label">Ano:</label>
 				<div class="col-sm-6">
@@ -44,9 +37,15 @@
 				</div>
 			</div>
 			<div class="form-group">	
-				<label class="col-sm-2 control-label">Vaga:</label>
+				<label class="col-sm-2 control-label">Marca:</label>
 				<div class="col-sm-6">
-					<input class="form-control" type="text" name="veiculo.vaga" value="${veiculo.vaga}"/>
+					<input class="form-control" type="text" name="veiculo.marca" value="${veiculo.marca}"/>
+				</div>
+			</div>
+			<div class="form-group">		
+				<label class="col-sm-2 control-label">Modelo:</label>
+				<div class="col-sm-6">
+					<input class="form-control" type="text" name="veiculo.modelo" value="${veiculo.modelo}"/>
 				</div>
 			</div>
 			<a type="button" class="btn btn-default" href="${linkTo[VeiculoController].listar()}">Voltar</a>

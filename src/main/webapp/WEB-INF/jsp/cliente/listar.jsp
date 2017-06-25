@@ -31,12 +31,16 @@
 				<td align="center"><c:out value="${cliente.endereco}"/></td>
 				<td align="center"><c:out value="${cliente.telefone}"/></td>
 				<td>
+				
 					<a class="btn btn-xs btn-primary" type="button" href="${linkTo[ClienteController].visualiza(cliente.codigo)}">
 						<span style="padding: 2px" class="glyphicon glyphicon-pencil"></span>
+						<strong>Editar</strong>
 					</a>
 					<a class="btn btn-xs btn-danger" type="button" href="${linkTo[ClienteController].excluir(cliente.codigo)}">
 						<span style="padding: 2px" class="glyphicon glyphicon-trash"></span>
+						<strong>Deletar</strong>
 					</a>
+			
 				</td>
 			</tr>
 		</c:forEach>

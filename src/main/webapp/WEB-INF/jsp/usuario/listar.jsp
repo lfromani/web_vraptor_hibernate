@@ -19,7 +19,7 @@
 				<td style="width: 10%"><b>Código</b></td>
 				<td style="width: 30%"><b>Nome</b></td>
 				<td style="width: 30%"><b>Email</b></td>
-				<td style="width: 5%"><b>Opções</b></td>
+				<td style="width: 15%"><b>Opções</b></td>
 			</tr>
 		<c:forEach var="usuario" items="${resultado}">
 			<tr>
@@ -29,10 +29,14 @@
 				<td>
 					<a class="btn btn-xs btn-primary" type="button" href="${linkTo[UsuarioController].visualiza(usuario.codigo)}">
 						<span style="padding: 2px" class="glyphicon glyphicon-pencil"></span>
+						<strong>Editar</strong>
 					</a>
+					
 					<a class="btn btn-xs btn-danger" type="button" href="${linkTo[UsuarioController].excluir(usuario.codigo)}">
 						<span style="padding: 2px" class="glyphicon glyphicon-trash"></span>
+						<strong>Deletar</strong>
 					</a>
+					
 				</td>
 			</tr>
 		</c:forEach>

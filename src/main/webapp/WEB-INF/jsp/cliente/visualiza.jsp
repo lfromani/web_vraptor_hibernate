@@ -34,7 +34,7 @@
 			<div class="form-group">	
 				<label class="col-sm-2 control-label">Endereço:</label>
 				<div class="col-sm-6">
-					<input class="form-control" type="text" name="cliente.endereco" value="${cliente.cpf}"/>
+					<input class="form-control" type="text" name="cliente.endereco" value="${cliente.endereco}"/>
 				</div>
 			</div>
 			<div class="form-group">	

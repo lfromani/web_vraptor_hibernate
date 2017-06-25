@@ -33,25 +33,25 @@
 					<div class="form-group">
 						<label class="col-sm-3 control-label">Nome*</label>
 						<div class="col-sm-6">
-							<input class="form-control" type="text" name="cliente.nome" value="${cliente.nome}" required="required" placeholder="nome"/>
+							<input class="form-control" type="text" name="cliente.nome" value="${cliente.nome}" required="required" placeholder="Nome"/>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-sm-3 control-label">CPF*</label>
 						<div class="col-sm-6">
-							<input class="form-control" type="text" name="cliente.cpf"value="${cliente.cpf}" required="required" placeholder="cpf"/>
+							<input class="form-control" type="text" name="cliente.cpf"value="${cliente.cpf}" required="required" placeholder="Ex.: 000.000.000-00"/>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-sm-3 control-label">Endereço*</label>
 						<div class="col-sm-6">
-							<input class="form-control" type="text" name="cliente.endereco" value="${cliente.endereco}" required="required" placeholder="endereço"/>
+							<input class="form-control" type="text" name="cliente.endereco" value="${cliente.endereco}" required="required" placeholder="Endereço"/>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-sm-3 control-label">Telefone*</label>
 						<div class="col-sm-6">
-							<input class="form-control" type="text" name="cliente.telefone" value="${cliente.telefone}" required="required" placeholder="telefone" />
+							<input class="form-control" type="text" name="cliente.telefone" value="${cliente.telefone}" required="required" placeholder="Ex.:(00)00000-0000" />
 						</div>
 					</div>
 					<br> <a type="button"class="col-sm-offset-3 btn btn-default" href="${linkTo[LoginController].index()}">Cancelar</a>
