@@ -13,9 +13,8 @@ import javax.persistence.NamedQuery;
 		@NamedQuery(name = Usuario.LISTAR, query = "select u from Usuario u"),
 		@NamedQuery(name = Usuario.PESQUISAR_POR_NOME, query = "select u from Usuario u where u.nome like :NOME"),
 		@NamedQuery(name = Usuario.PESQUISAR_POR_CODIGO, query = "select u from Usuario u where u.codigo = :CODIGO"),
-		@NamedQuery(name = Usuario.PESQUISAR_POR_EMAIL, query = "select u from Usuario u where u.email = :EMAIL"),
-		@NamedQuery(name = Usuario.PESQUISAR_POR_SENHA, query = "select u from Usuario u where u.senha = :SENHA"),
-		@NamedQuery(name = Usuario.LOGAR, query = "select u from Usuario u where u.email = :email and u.senha = :senha"),
+		@NamedQuery(name = Usuario.LOGAR, query = "select u from Usuario u where u.email = :email and u.senha = :senha") 
+
 })
 
 @Entity
@@ -26,8 +25,6 @@ public class Usuario implements Serializable, MeuModelo {
 	public static final String LISTAR = "usuario.listar";
 	public static final String PESQUISAR_POR_NOME = "usuario.pesquisar_por_nome";
 	public static final String PESQUISAR_POR_CODIGO = "usuario.pesqusar_por_codigo";
-	public static final String PESQUISAR_POR_EMAIL = "usuario.pesquisar_por_email";
-	public static final String PESQUISAR_POR_SENHA = "usuario.pesquisar_por_senha";
 	public static final String LOGAR = "usario.logar";
 
 	@Id
@@ -74,9 +71,9 @@ public class Usuario implements Serializable, MeuModelo {
 	public String getEmail() {
 		return email;
 	}
-
-	public void setLogin(String email) {
+public void setEmail(String email) {
 		this.email = email;
+
 	}
 
 	public String getSenha() {

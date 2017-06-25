@@ -10,7 +10,6 @@ import br.com.caelum.vraptor.Result;
 import br.edu.unoesc.dao.DuracaoDAO;
 import br.edu.unoesc.exception.MinhaExceptionDAO;
 import br.edu.unoesc.model.Duracao;
-import br.edu.unoesc.model.Tempo;
 
 @Controller
 @Path("/duracao")
@@ -26,7 +25,6 @@ public class DuracaoController {
 
 	@Get("/cadastro")
 	public void cadastro() {
-//		result.include("carregaTempo", Tempo.values());
 		result.include("duracao", this.duracaoSelecionado);
 	}
 	@Get("/visualiza")
