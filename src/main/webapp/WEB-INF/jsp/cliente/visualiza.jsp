@@ -43,7 +43,7 @@
 					<input class="form-control" type="text" name="cliente.telefone" value="${cliente.telefone}"/>
 				</div>
 			</div>
-			<a type="button" class="btn btn-default" href="${linkTo[ClienteController].listar()}">Voltar</a>
+			<a type="button" class="col-sm-offset-2 btn btn-default" href="${linkTo[ClienteController].listar()}">Cancelar</a>
 			<button type="submit" class="btn btn-success">Salvar</button>
 		</form>
 	</div>

@@ -14,7 +14,7 @@
 	<br>
 	<br>
 	<div class="col-sm-6">
-		<h3>Cadastro de Veículo <small> - Editar</small></h3>
+		<h3>Cadastro veículo <small> - Editar</small></h3>
 		<br>
 		<form class="form-horizontal" action="${linkTo[VeiculoController].editar()}" method="post">
 			<input class="form-control" type="hidden" name="veiculo.codigo" value="${veiculo.codigo}"/>
@@ -48,7 +48,7 @@
 					<input class="form-control" type="text" name="veiculo.modelo" value="${veiculo.modelo}"/>
 				</div>
 			</div>
-			<a type="button" class="btn btn-default" href="${linkTo[VeiculoController].listar()}">Voltar</a>
+			<a type="button" class="col-sm-offset-2 btn btn-default" href="${linkTo[VeiculoController].listar()}">Cancelar</a>
 			<button type="submit" class="btn btn-success">Salvar</button>
 		</form>
 	</div>

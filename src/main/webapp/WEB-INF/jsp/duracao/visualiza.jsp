@@ -19,20 +19,20 @@
 		<form class="form-horizontal" action="${linkTo[DuracaoController].editar()}" method="post">
 			<input class="form-control" type="hidden" name="duracao.codigo" value="${duracao.codigo}"/>
 			<div class="form-group">		
-				<label class="col-sm-2 control-label">Número vaga:</label>
+				<label class="col-sm-3 control-label">Número vaga:</label>
 				<div class="col-sm-6">
 					<input class="form-control" type="text" name="duracao.vaga" value="${duracao.vaga}"/>
 				</div>
 			</div>
 			
 			<div class="form-group">	
-				<label class="col-sm-2 control-label">Hora entrada:</label>
+				<label class="col-sm-3 control-label">Hora entrada:</label>
 				<div class="col-sm-6">
 					<input class="form-control" type="text" name="duracao.entrada" value="${duracao.entrada}"/>
 				</div>
 			</div>
 				<div class="form-group">
-					<label class="col-sm-3 control-label">Tempo</label>
+					<label class="col-sm-3 control-label">Tempo:</label>
 						<div class="col-sm-6">
 							<label class="radio-inline">
 								<input type="radio" name="duracao.tempo" value="30 minutos" checked="checked">
@@ -44,7 +44,7 @@
 							</label>
 						</div>
 					</div>
-			<a type="button" class="btn btn-default" href="${linkTo[DuracaoController].listar()}">Cancelar</a>
+			<a type="button" class="col-sm-offset-3 btn btn-default" href="${linkTo[DuracaoController].listar()}">Cancelar</a>
 			<button type="submit" class="btn btn-success">Salvar</button>
 		</form>
 	</div>

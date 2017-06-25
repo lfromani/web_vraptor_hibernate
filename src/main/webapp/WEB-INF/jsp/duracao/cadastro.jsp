@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Duracão da vaga</title>
+<title>Duracão vaga</title>
 <link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet">
 <link href="<c:url value="/js/bootstrap.js"/>" rel="stylesheet">
 <c:import url="../login/index.jsp"></c:import>
