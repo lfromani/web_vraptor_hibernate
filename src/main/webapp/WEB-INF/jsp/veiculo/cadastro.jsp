@@ -55,9 +55,15 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-3 control-label">Número vaga*</label>
+						<label class="col-sm-3 control-label">Marca*</label>
 						<div class="col-sm-6">
-							<input class="form-control" type="text" name="veiculo.vaga"value="${veiculo.vaga}" required="required"placeholder="Número da vaga"/>
+							<input class="form-control" type="text" name="veiculo.marca"value="${veiculo.marca}" required="required"placeholder="Marca"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">Modelo*</label>
+						<div class="col-sm-6">
+							<input class="form-control" type="text" name="veiculo.modelo"value="${veiculo.modelo}" required="required"placeholder="Modelo"/>
 						</div>
 					</div>
 					<br> <a type="button"class="col-sm-offset-3 btn btn-default" href="${linkTo[LoginController].index()}">Cancelar</a>

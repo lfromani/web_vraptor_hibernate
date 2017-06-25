@@ -38,20 +38,23 @@ public class Veiculo implements Serializable, MeuModelo {
 	private String cor;
 
 	@Column
-	private Long vaga;
+	private String marca;
 
+	@Column
+	private String modelo;
+	
 	public Veiculo() {
 		super();
 	}
 
-	public Veiculo(Long codigo, String nome, String ano, String placa, String cor, Long vaga) {
+	public Veiculo(Long codigo, String nome, String ano, String placa, String cor, String marca, String modelo) {
 		super();
 		this.codigo = codigo;
 		this.nome = nome;
 		this.ano = ano;
 		this.placa = placa;
 		this.cor = cor;
-		this.vaga = vaga;
+		this.marca = marca;
 	}
 
 	public Long getCodigo() {
@@ -94,12 +97,19 @@ public class Veiculo implements Serializable, MeuModelo {
 		this.cor = cor;
 	}
 
-	public Long getVaga() {
-		return vaga;
+	public String getMarca() {
+		return marca;
 	}
 
-	public void setVaga(Long vaga) {
-		this.vaga = vaga;
+	public void setMarca(String marca) {
+		this.marca = marca;
 	}
 
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
 }
