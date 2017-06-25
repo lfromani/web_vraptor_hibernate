@@ -9,8 +9,9 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 
-@NamedQueries({ @NamedQuery(name = Duracao.LISTAR, query = "select u from Duracao u"),
-		@NamedQuery(name = Duracao.PESQUISAR_POR_CODIGO, query = "select u from Duracao u where u.codigo like :Codigo"), })
+@NamedQueries({ @NamedQuery(name = Duracao.LISTAR, query = "select d from Duracao d"),
+	@NamedQuery(name = Duracao.PESQUISAR_POR_CODIGO, query = "select d from Duracao d where d.codigo = :CODIGO"),
+	})
 
 @Entity
 public class Duracao implements Serializable, MeuModelo {

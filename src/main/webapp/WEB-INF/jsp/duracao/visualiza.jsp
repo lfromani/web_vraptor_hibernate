@@ -25,12 +25,12 @@
 				</div>
 			</div>
 			
-			<div class="form-group">	
-				<label class="col-sm-3 control-label">Hora entrada:</label>
-				<div class="col-sm-6">
-					<input class="form-control" type="text" name="duracao.entrada" value="${duracao.entrada}"/>
-				</div>
-			</div>
+		<div class="form-group">
+						<label class="col-sm-3 control-label">Hora entrada:</label>
+						<div class="col-sm-6">
+							<input class="form-control" type="time" name="duracao.entrada" value="${duracao.entrada}"/>
+						</div>
+					</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label">Tempo:</label>
 						<div class="col-sm-6">
