@@ -1,7 +1,9 @@
 package br.edu.unoesc.controller;
 
 import java.util.List;
+
 import javax.inject.Inject;
+
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Path;
