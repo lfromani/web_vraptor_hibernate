@@ -12,7 +12,7 @@ public class UsuarioDAO extends GenericDAO<Usuario> {
 	public Usuario logar(Usuario usuarioBusca) {
 		conectar();
 		TypedQuery<Usuario> tq = (TypedQuery<Usuario>) em.createNamedQuery(Usuario.LOGAR, Usuario.class);
-		tq.setParameter("login", usuarioBusca.getLogin());
+		tq.setParameter("email", usuarioBusca.getEmail());
 		tq.setParameter("senha", usuarioBusca.getSenha());
 		try {
 			usuarioBusca = tq.getSingleResult();

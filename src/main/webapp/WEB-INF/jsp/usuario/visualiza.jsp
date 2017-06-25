@@ -26,9 +26,9 @@
 			</div>
 			
 			<div class="form-group">	
-				<label class="col-sm-2 control-label">Login:</label>
+				<label class="col-sm-2 control-label">Email:</label>
 				<div class="col-sm-6">
-					<input class="form-control" type="text" name="usuario.login" value="${usuario.login}"/>
+					<input class="form-control" type="text" name="usuario.email" value="${usuario.email}"/>
 				</div>
 			</div>
 			<div class="form-group">	
