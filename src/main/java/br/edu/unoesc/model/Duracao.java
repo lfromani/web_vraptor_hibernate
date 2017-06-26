@@ -33,7 +33,7 @@ public class Duracao implements Serializable, MeuModelo {
 
 	@Column(nullable = false)
 	private String tempo;
-
+	
 	public Duracao() {
 		super();
 	}

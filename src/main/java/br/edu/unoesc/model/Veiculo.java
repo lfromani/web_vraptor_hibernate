@@ -43,8 +43,7 @@ public class Veiculo implements Serializable, MeuModelo {
 	
 	public Veiculo() {
 		super();
-	
-}
+	}
 
 	public Veiculo(Long codigo, String ano, String placa, String cor, String marca, String modelo) {
 		super();

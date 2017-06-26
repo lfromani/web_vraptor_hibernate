@@ -15,18 +15,18 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
             	<li class="sidebar-brand"><a href="${linkTo[LoginController].index()}">Home<span class="glyphicon glyphicon-home"></span></a></li>
+                
                 <li><a href="${linkTo[VeiculoController].cadastro()}">Cadastro de veículo</a></li>
-                <li><a href="${linkTo[VeiculoController].listar()}">Lista de veículo</a></li>
-                <li role="separator" class="divider"></li>
+                <li><a href="${linkTo[VeiculoController].listar()}">Veículos</a></li>
                 <li><a href="${linkTo[UsuarioController].cadastro()}">Cadastro de usuário</a></li>
-                <li><a href="${linkTo[UsuarioController].listar()}">Lista de usuário</a></li>
-                <li role="separator" class="divider"></li>
+                <li><a href="${linkTo[UsuarioController].listar()}">Usuários</a></li>
                 <li><a href="${linkTo[DuracaoController].cadastro()}">Cadastro de vaga</a></li>
-                <li><a href="${linkTo[DuracaoController].listar()}">Lista de vaga</a></li>
-                <li role="separator" class="divider"></li>
+                <li><a href="${linkTo[DuracaoController].listar()}">Vagas</a></li>
                 <li><a href="${linkTo[ClienteController].cadastro()}">Cadastro de cliente</a></li>
-                <li><a href="${linkTo[ClienteController].listar()}">Lista de cliente</a></li>
-                <li role="separator" class="divider"></li>
+                <li><a href="${linkTo[ClienteController].listar()}">Clientes</a></li>
+                <li><a href="${linkTo[MovimentoController].cadastro()}">Cadastrar movimento</a></li>
+                <li><a href="${linkTo[MovimentoController].listar()}">Movimentos</a></li>
+                
                 <li><a href="${linkTo[IndexController].index()}">Sair<span class="glyphicon glyphicon-log-out"></span></a></li>
             </ul>
         </div>
