@@ -17,9 +17,9 @@
 	<table class="table table-bordered table-striped">
 	<tr style="text-align: center;">
 				<td style="width: 10%"><b>Código</b></td>
-				<td style="width: 20%"><b>Nome</b></td>
+				<td style="width: 15%"><b>Nome</b></td>
 				<td style="width: 15%"><b>CPF</b></td>
-				<td style="width: 10%"><b>Endereço</b></td>
+				<td style="width: 15%"><b>Endereço</b></td>
 				<td style="width: 15%"><b>Telefone</b></td>
 				<td style="width: 15%"><b>Opções</b></td>
 			</tr>
