@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Lista de Clientes</title>
+	<title>Estacionamento</title>
 	<link href="<c:url value="/css/bootstrap.css"/>" rel="stylesheet">
 	<link href="<c:url value="/js/bootstrap.js"/>" rel="stylesheet">
 	<c:import url="../login/index.jsp"></c:import>
@@ -14,30 +14,26 @@
 	<table class="table table-bordered table-striped">
 	<tr style="text-align: center;">
 				<td style="width: 10%"><b>Código</b></td>
-				<td style="width: 15%"><b>Nome</b></td>
-				<td style="width: 15%"><b>CPF</b></td>
-				<td style="width: 15%"><b>Endereço</b></td>
-				<td style="width: 15%"><b>Telefone</b></td>
-				<td style="width: 15%"><b>Opções</b></td>
+				<td style="width: 25%"><b>Cliente</b></td>
+				<td style="width: 10%"><b>Vaga</b></td>
+				<td style="width: 15%"><b>Veículo</b></td>
+				<td style="width: 13%"><b>opções</b></td>
 			</tr>
-		<c:forEach var="cliente" items="${resultado}">
+		<c:forEach var="movimento" items="${resultado}">
 			<tr style="text-align: center">
-				<td align="center"><c:out value="${cliente.codigo}"/></td>
-				<td align="center"><c:out value="${cliente.nome}"/></td>
-				<td align="center"><c:out value="${cliente.cpf}"/></td>
-				<td align="center"><c:out value="${cliente.endereco}"/></td>
-				<td align="center"><c:out value="${cliente.telefone}"/></td>
+				<td align="center"><c:out value="${movimento.codigo}"/></td>
+				<td align="center"><c:out value="${movimento.cliente.nome}"/></td>
+				<td align="center"><c:out value="${movimento.duracao.vaga}"/></td>
+				<td align="center"><c:out value="${movimento.veiculo.placa}"/></td>
 				<td>
-				
-					<a class="btn btn-xs btn-primary" type="button" href="${linkTo[ClienteController].visualiza(cliente.codigo)}">
+					<a class="btn btn-xs btn-primary" type="button" href="${linkTo[MovimentoController].visualiza(movimento.codigo)}">
 						<span style="padding: 2px" class="glyphicon glyphicon-pencil"></span>
 						<strong>Editar</strong>
 					</a>
-					<a class="btn btn-xs btn-danger" type="button" href="${linkTo[ClienteController].excluir(cliente.codigo)}">
+					<a class="btn btn-xs btn-danger" type="button" href="${linkTo[MovimentoController].excluir(movimento.codigo)}">
 						<span style="padding: 2px" class="glyphicon glyphicon-trash"></span>
 						<strong>Deletar</strong>
 					</a>
-			
 				</td>
 			</tr>
 		</c:forEach>

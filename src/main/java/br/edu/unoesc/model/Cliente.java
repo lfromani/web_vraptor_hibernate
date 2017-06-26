@@ -37,7 +37,7 @@ public class Cliente implements Serializable, MeuModelo {
 
 	@Column(nullable = false)
 	private String telefone;
-
+	
 	public Cliente() {
 		super();
 	}

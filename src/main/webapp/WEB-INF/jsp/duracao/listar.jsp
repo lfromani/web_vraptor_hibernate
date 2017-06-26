@@ -10,9 +10,6 @@
 	<c:import url="../login/index.jsp"></c:import>
 </head>
 <body>
-	<br>
-	<br>
-	<br>
 	<div style="margin: 2% 10% 10% 10%" class="container-fluid">
 	<table class="table table-bordered table-striped">
 	<tr style="text-align: center;">
