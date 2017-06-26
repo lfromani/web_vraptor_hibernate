@@ -10,9 +10,6 @@
 	<c:import url="../login/index.jsp"></c:import>	
 </head>
 <body>
-	<br>
-	<br>
-	<br>
 	<div class="col-sm-6">
 		<h3>Cadastro de Cliente <small> - Editar</small></h3>
 		<br>

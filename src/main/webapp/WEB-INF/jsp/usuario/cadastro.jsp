@@ -10,9 +10,6 @@
 	<c:import url="../login/index.jsp"></c:import>	
 </head>
 <body>
-	<br>
-	<br>
-	<br>
 	<div class="container">
 	<div class="col-md-6">
 	<div class="form-area">
