@@ -25,8 +25,8 @@ public class Movimento implements Serializable, MeuModelo {
 	@Id
 	@GeneratedValue
 	private Long codigo;
-
-	@ManyToOne(targetEntity = Cliente.class, fetch=FetchType.LAZY)
+	
+	@ManyToOne(targetEntity = Cliente.class, fetch=FetchType.EAGER)
 	@JoinColumn(name = "codcliente", nullable = false)
 	private Cliente cliente = new Cliente();
 

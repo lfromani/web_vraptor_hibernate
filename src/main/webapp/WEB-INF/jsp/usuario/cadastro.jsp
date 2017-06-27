@@ -38,7 +38,7 @@
 			<div class="form-group">	
 				<label class="col-sm-2 control-label">Senha*</label>
 				<div class="col-sm-6">
-					<input class="form-control" type="password" name="usuario.senha" value="${usuario.senha}"required="required"  placeholder="Minimo 6 caracteres"/>
+					<input class="form-control" type="password" name="usuario.senha" value="${usuario.senha}"required="required"  placeholder="Digite sua senha"/>
 				</div>
 			</div>
 			<br>

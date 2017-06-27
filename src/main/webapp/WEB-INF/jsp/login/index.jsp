@@ -12,18 +12,16 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
 	type="text/javascript"></script>
-	
-	<style>
-	 body{
-	 background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrqkA_m6NodyjC5QZOzLxOufQMLCJiEvR3z2Tfn4gs1bxIb2nXKg);
-	 background-attachment: fixed;
-	 background-size: 100%;
-	 background-repeat: no-repeat;
-	 background-color: #000;
-	 }
-	
-	
-	</style>
+<style>
+body {
+	background-image:
+		url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQ6YsqlXyzuFdmjWdNEGhUvE2kHtmW_g3yOtBPWGGwiMpPCNo);
+	background-attachment: fixed;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: #000;
+}
+</style>
 </head>
 <body>
 	<div id="wrapper">
@@ -59,8 +57,7 @@
 					<div class="col-lg-12">
 						<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span
 							class="glyphicon glyphicon-th-large"></span><strong>Menu</strong>
-						</a>
-						<br> <br>
+						</a> <br> <br>
 					</div>
 				</div>
 			</div>
