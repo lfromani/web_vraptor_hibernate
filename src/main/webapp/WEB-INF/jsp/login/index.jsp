@@ -58,7 +58,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span
-							class="glyphicon glyphicon-th-large"></span><strong>Começar</strong>
+							class="glyphicon glyphicon-th-large"></span><strong>Menu</strong>
 						</a>
 						<br> <br>
 					</div>
