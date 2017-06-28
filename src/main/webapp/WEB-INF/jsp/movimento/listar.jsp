@@ -17,7 +17,7 @@
 				<td style="width: 25%"><b>Cliente</b></td>
 				<td style="width: 10%"><b>Vaga</b></td>
 				<td style="width: 15%"><b>Veículo</b></td>
-				<td style="width: 13%"><b>opções</b></td>
+				<td style="width: 13%"><b>Opções</b></td>
 			</tr>
 		<c:forEach var="movimento" items="${resultado}">
 			<tr style="text-align: center">

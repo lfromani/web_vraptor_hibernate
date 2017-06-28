@@ -8,17 +8,22 @@ import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Result;
 import br.edu.unoesc.dao.UsuarioDAO;
+import br.edu.unoesc.exception.MinhaExceptionDAO;
 import br.edu.unoesc.model.Usuario;
 
 @Controller
 @Path("/login")
 public class LoginController {
 
+	@Get("/primeiroacesso")
+	public void primeiroacesso(){
+		
+	}
 	@Inject
 	private Result result;
 
 	@Inject
-	private UsuarioDAO usuarioDAO;
+	UsuarioDAO usuarioDAO;
 
 	@Get()
 	public void index() {
@@ -36,5 +41,18 @@ public class LoginController {
 
 	@Get("/erro")
 	public void erro() {
+	}
+
+	@Post("/salvar")
+	public void salvar(Usuario usuario) {
+		if (usuario != null) {
+			try {
+				usuarioDAO.salvar(usuario);
+			} catch (MinhaExceptionDAO e) {
+				result.include("erro", e.getMessage());
+			}
+		}
+		
+	result.forwardTo(IndexController.class).index();
 	}
 }

@@ -5,8 +5,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Login</title>
-	<link href="css/style.css" rel="stylesheet">
-	<link href="css/bootstrap.css" rel="stylesheet">
+<link href='<c:url value="/css/style.css"/>' rel="stylesheet">
+	<link href='<c:url value="/css/bootstrap.css"/>'rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -19,9 +19,12 @@
         <br>
         <label>Senha</label>
         <br>
+        
         <input type="password" name="usuario.senha" value="${usuario.senha}" id="senha" class="form-control" placeholder="senha" required>
-        <br>
+                <br>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+         <a class=" btn btn-link"
+        href='<c:url value="/login/primeiroacesso"/>'>Cadastre-se</a> 
        </div>
       </form>
     </div>
