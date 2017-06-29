@@ -18,9 +18,11 @@
 					Movimento <small> - Novo</small>
 				</h3>
 				<br>
-				<form class="form-horizontal"
-					action="${linkTo[MovimentoController].salvar()}" method="post">
+				<form class="form-horizontal" action="${linkTo[MovimentoController].salvar()}" method="post">
 					<input class="form-control" type="hidden" name="movimento.codigo"/>
+					<input class="form-control" type="hidden" name="movimento.veiculo.codigo"/>
+					<input class="form-control" type="hidden" name="movimento.cliente.codigo"/>
+					<input class="form-control" type="hidden" name="movimento.duracao.codigo"/>
 					<div class="form-group">
 						<label class="col-sm-3 control-label">Cliente*</label>
 						<div class="col-sm-6">

@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -26,17 +25,14 @@ public class Movimento implements Serializable, MeuModelo {
 	@GeneratedValue
 	private Long codigo;
 	
-	@ManyToOne(targetEntity = Cliente.class, fetch=FetchType.EAGER)
-	@JoinColumn(name = "codcliente", nullable = false)
-	private Cliente cliente = new Cliente();
+	@ManyToOne(fetch = FetchType.EAGER)
+	private Cliente cliente;
 
-	@ManyToOne(targetEntity = Veiculo.class, fetch=FetchType.LAZY)
-	@JoinColumn(name = "codveiculo", nullable = false)
-	private Veiculo veiculo = new Veiculo();
+	@ManyToOne(fetch = FetchType.EAGER)
+	private Veiculo veiculo;
 
-	@ManyToOne(targetEntity = Duracao.class, fetch=FetchType.LAZY)
-	@JoinColumn(name = "codduracao", nullable = false)
-	private Duracao duracao = new Duracao();
+	@ManyToOne(fetch = FetchType.EAGER)
+	private Duracao duracao;
 
 	public Movimento() {
 		super();

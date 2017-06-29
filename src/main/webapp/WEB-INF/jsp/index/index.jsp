@@ -24,7 +24,7 @@
                 <br>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
          <a class=" btn btn-link"
-        href='<c:url value="/login/primeiroacesso"/>'>Cadastre-se</a> 
+        href='<c:url value="/login/primeiroacesso"/>'>Primeiro acesso? Cadastre-se.</a> 
        </div>
       </form>
     </div>
